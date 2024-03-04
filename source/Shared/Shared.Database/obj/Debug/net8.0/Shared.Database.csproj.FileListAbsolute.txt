@@ -1,0 +1,15 @@
+C:\Users\MBARK\source\repos\ShortifyApp\source\Shared\Shared.Database\bin\Debug\net8.0\Shared.Database.deps.json
+C:\Users\MBARK\source\repos\ShortifyApp\source\Shared\Shared.Database\bin\Debug\net8.0\Shared.Database.runtimeconfig.json
+C:\Users\MBARK\source\repos\ShortifyApp\source\Shared\Shared.Database\bin\Debug\net8.0\Shared.Database.dll
+C:\Users\MBARK\source\repos\ShortifyApp\source\Shared\Shared.Database\bin\Debug\net8.0\Shared.Database.pdb
+C:\Users\MBARK\source\repos\ShortifyApp\source\Shared\Shared.Database\obj\Debug\net8.0\Shared.Database.csproj.AssemblyReference.cache
+C:\Users\MBARK\source\repos\ShortifyApp\source\Shared\Shared.Database\obj\Debug\net8.0\Shared.Database.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MBARK\source\repos\ShortifyApp\source\Shared\Shared.Database\obj\Debug\net8.0\Shared.Database.AssemblyInfoInputs.cache
+C:\Users\MBARK\source\repos\ShortifyApp\source\Shared\Shared.Database\obj\Debug\net8.0\Shared.Database.AssemblyInfo.cs
+C:\Users\MBARK\source\repos\ShortifyApp\source\Shared\Shared.Database\obj\Debug\net8.0\Shared.Database.csproj.CoreCompileInputs.cache
+C:\Users\MBARK\source\repos\ShortifyApp\source\Shared\Shared.Database\obj\Debug\net8.0\Shared.Database.sourcelink.json
+C:\Users\MBARK\source\repos\ShortifyApp\source\Shared\Shared.Database\obj\Debug\net8.0\Shared.Database.dll
+C:\Users\MBARK\source\repos\ShortifyApp\source\Shared\Shared.Database\obj\Debug\net8.0\refint\Shared.Database.dll
+C:\Users\MBARK\source\repos\ShortifyApp\source\Shared\Shared.Database\obj\Debug\net8.0\Shared.Database.pdb
+C:\Users\MBARK\source\repos\ShortifyApp\source\Shared\Shared.Database\obj\Debug\net8.0\Shared.Database.genruntimeconfig.cache
+C:\Users\MBARK\source\repos\ShortifyApp\source\Shared\Shared.Database\obj\Debug\net8.0\ref\Shared.Database.dll

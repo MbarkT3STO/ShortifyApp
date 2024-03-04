@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+option csharp_namespace = "Shared.Protos.Link";
+
+service LinkService {
+    rpc GetLinks(GetLinksRequest) returns (GetLinksResponse);
+}
+
+message GetLinksRequest {
+
+}
+
+message GetLinksResponse {
+    repeated GetLinksResponseDTO links = 1;
+}
+
+message GetLinksResponseDTO{
+    int32 id = 1;
+    string originalUrl = 2;
+    string shortUrl = 3;
+    google.protobuf.Timestamp creationDateAndTime = 4;
+    google.protobuf.Timestamp expirationDateAndTime = 5;
+    bool isActive = 6;
+}
+

@@ -1,6 +1,14 @@
+using DatabaseService.DI;
 using DatabaseService.Services;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Add the appsettings.json file to the configuration.
+builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+
+var connectionString = builder.Configuration.GetConnectionString("PostgreSqlConnection");
+
+builder.Services.AddDatabaseServices(connectionString);
 
 // Add services to the container.
 builder.Services.AddGrpc();
