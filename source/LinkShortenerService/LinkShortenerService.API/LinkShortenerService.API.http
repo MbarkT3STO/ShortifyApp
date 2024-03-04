@@ -1,0 +1,6 @@
+@LinkShortenerService.API_HostAddress = http://localhost:5211
+
+GET {{LinkShortenerService.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
