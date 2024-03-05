@@ -222,3 +222,5 @@ c:\Users\MBARK.AzureAD\source\repos\ShortifyApp\source\DatabaseService\DatabaseS
 c:\Users\MBARK.AzureAD\source\repos\ShortifyApp\source\DatabaseService\DatabaseService\obj\Debug\net8.0\ref\DatabaseService.dll
 C:\Users\MBARK.AzureAD\source\repos\ShortifyApp\source\DatabaseService\DatabaseService\bin\Debug\net8.0\AutoMapper.dll
 C:\Users\MBARK.AzureAD\source\repos\ShortifyApp\source\DatabaseService\DatabaseService\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\MBARK\source\repos\ShortifyApp\source\DatabaseService\DatabaseService\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\MBARK\source\repos\ShortifyApp\source\DatabaseService\DatabaseService\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
