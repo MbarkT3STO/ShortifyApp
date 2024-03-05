@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MBARK\\source\\repos\\ShortifyApp\\source\\Shared\\Shared.Database\\Shared.Database.csproj": {}
+    "C:\\Users\\MBARK.AzureAD\\source\\repos\\ShortifyApp\\source\\Shared\\Shared.Database\\Shared.Database.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MBARK\\source\\repos\\ShortifyApp\\source\\Shared\\Shared.Database\\Shared.Database.csproj": {
+    "C:\\Users\\MBARK.AzureAD\\source\\repos\\ShortifyApp\\source\\Shared\\Shared.Database\\Shared.Database.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MBARK\\source\\repos\\ShortifyApp\\source\\Shared\\Shared.Database\\Shared.Database.csproj",
+        "projectUniqueName": "C:\\Users\\MBARK.AzureAD\\source\\repos\\ShortifyApp\\source\\Shared\\Shared.Database\\Shared.Database.csproj",
         "projectName": "Shared.Database",
-        "projectPath": "C:\\Users\\MBARK\\source\\repos\\ShortifyApp\\source\\Shared\\Shared.Database\\Shared.Database.csproj",
-        "packagesPath": "C:\\Users\\MBARK\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MBARK\\source\\repos\\ShortifyApp\\source\\Shared\\Shared.Database\\obj\\",
+        "projectPath": "C:\\Users\\MBARK.AzureAD\\source\\repos\\ShortifyApp\\source\\Shared\\Shared.Database\\Shared.Database.csproj",
+        "packagesPath": "C:\\Users\\MBARK.AzureAD\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MBARK.AzureAD\\source\\repos\\ShortifyApp\\source\\Shared\\Shared.Database\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\MBARK\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MBARK.AzureAD\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -85,7 +85,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

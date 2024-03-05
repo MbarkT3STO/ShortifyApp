@@ -10,3 +10,15 @@ c:\Users\MBARK\source\repos\ShortifyApp\source\Shared\Shared.Protos\obj\Debug\ne
 c:\Users\MBARK\source\repos\ShortifyApp\source\Shared\Shared.Protos\obj\Debug\net8.0\refint\Shared.Protos.dll
 c:\Users\MBARK\source\repos\ShortifyApp\source\Shared\Shared.Protos\obj\Debug\net8.0\Shared.Protos.pdb
 c:\Users\MBARK\source\repos\ShortifyApp\source\Shared\Shared.Protos\obj\Debug\net8.0\ref\Shared.Protos.dll
+c:\Users\MBARK.AzureAD\source\repos\ShortifyApp\source\Shared\Shared.Protos\bin\Debug\net8.0\Shared.Protos.deps.json
+c:\Users\MBARK.AzureAD\source\repos\ShortifyApp\source\Shared\Shared.Protos\bin\Debug\net8.0\Shared.Protos.dll
+c:\Users\MBARK.AzureAD\source\repos\ShortifyApp\source\Shared\Shared.Protos\bin\Debug\net8.0\Shared.Protos.pdb
+c:\Users\MBARK.AzureAD\source\repos\ShortifyApp\source\Shared\Shared.Protos\obj\Debug\net8.0\Shared.Protos.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\MBARK.AzureAD\source\repos\ShortifyApp\source\Shared\Shared.Protos\obj\Debug\net8.0\Shared.Protos.AssemblyInfoInputs.cache
+c:\Users\MBARK.AzureAD\source\repos\ShortifyApp\source\Shared\Shared.Protos\obj\Debug\net8.0\Shared.Protos.AssemblyInfo.cs
+c:\Users\MBARK.AzureAD\source\repos\ShortifyApp\source\Shared\Shared.Protos\obj\Debug\net8.0\Shared.Protos.csproj.CoreCompileInputs.cache
+c:\Users\MBARK.AzureAD\source\repos\ShortifyApp\source\Shared\Shared.Protos\obj\Debug\net8.0\Shared.Protos.sourcelink.json
+c:\Users\MBARK.AzureAD\source\repos\ShortifyApp\source\Shared\Shared.Protos\obj\Debug\net8.0\Shared.Protos.dll
+c:\Users\MBARK.AzureAD\source\repos\ShortifyApp\source\Shared\Shared.Protos\obj\Debug\net8.0\refint\Shared.Protos.dll
+c:\Users\MBARK.AzureAD\source\repos\ShortifyApp\source\Shared\Shared.Protos\obj\Debug\net8.0\Shared.Protos.pdb
+c:\Users\MBARK.AzureAD\source\repos\ShortifyApp\source\Shared\Shared.Protos\obj\Debug\net8.0\ref\Shared.Protos.dll

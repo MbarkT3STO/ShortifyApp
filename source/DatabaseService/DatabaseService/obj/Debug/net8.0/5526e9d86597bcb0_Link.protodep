@@ -1,0 +1,3 @@
+obj\Debug\net8.0/Link.cs \
+obj\Debug\net8.0/LinkGrpc.cs: C:/Users/MBARK.AzureAD/.nuget/packages/grpc.tools/2.57.0/build/native/include/google/protobuf/timestamp.proto\
+ ../../Shared/Shared.Protos/Protos/Link/Link.proto
