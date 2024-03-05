@@ -49,6 +49,10 @@ namespace Shared.Protos {
     static readonly grpc::Marshaller<global::Shared.Protos.GetLinksRequest> __Marshaller_GetLinksRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Shared.Protos.GetLinksRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Shared.Protos.GetLinksResponse> __Marshaller_GetLinksResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Shared.Protos.GetLinksResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Shared.Protos.CreateLinkRequest> __Marshaller_CreateLinkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Shared.Protos.CreateLinkRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Shared.Protos.CreateLinkResponse> __Marshaller_CreateLinkResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Shared.Protos.CreateLinkResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Shared.Protos.GetLinksRequest, global::Shared.Protos.GetLinksResponse> __Method_GetLinks = new grpc::Method<global::Shared.Protos.GetLinksRequest, global::Shared.Protos.GetLinksResponse>(
@@ -57,6 +61,14 @@ namespace Shared.Protos {
         "GetLinks",
         __Marshaller_GetLinksRequest,
         __Marshaller_GetLinksResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Shared.Protos.CreateLinkRequest, global::Shared.Protos.CreateLinkResponse> __Method_CreateLink = new grpc::Method<global::Shared.Protos.CreateLinkRequest, global::Shared.Protos.CreateLinkResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateLink",
+        __Marshaller_CreateLinkRequest,
+        __Marshaller_CreateLinkResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -74,6 +86,12 @@ namespace Shared.Protos {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Shared.Protos.CreateLinkResponse> CreateLink(global::Shared.Protos.CreateLinkRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
@@ -82,7 +100,8 @@ namespace Shared.Protos {
     public static grpc::ServerServiceDefinition BindService(LinkProtoServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_GetLinks, serviceImpl.GetLinks).Build();
+          .AddMethod(__Method_GetLinks, serviceImpl.GetLinks)
+          .AddMethod(__Method_CreateLink, serviceImpl.CreateLink).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -93,6 +112,7 @@ namespace Shared.Protos {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, LinkProtoServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_GetLinks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Shared.Protos.GetLinksRequest, global::Shared.Protos.GetLinksResponse>(serviceImpl.GetLinks));
+      serviceBinder.AddMethod(__Method_CreateLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Shared.Protos.CreateLinkRequest, global::Shared.Protos.CreateLinkResponse>(serviceImpl.CreateLink));
     }
 
   }

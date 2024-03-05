@@ -51,3 +51,6 @@ C:\Users\MBARK.AzureAD\source\repos\ShortifyApp\source\LinkShortenerService\Link
 C:\Users\MBARK.AzureAD\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortenerService.API\obj\Debug\net8.0\LinkShortenerService.API.pdb
 C:\Users\MBARK.AzureAD\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortenerService.API\obj\Debug\net8.0\LinkShortenerService.API.genruntimeconfig.cache
 C:\Users\MBARK.AzureAD\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortenerService.API\obj\Debug\net8.0\ref\LinkShortenerService.API.dll
+C:\Users\MBARK.AzureAD\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortenerService.API\bin\Debug\net8.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\MBARK.AzureAD\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortenerService.API\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\MBARK.AzureAD\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortenerService.API\bin\Debug\net8.0\Newtonsoft.Json.dll

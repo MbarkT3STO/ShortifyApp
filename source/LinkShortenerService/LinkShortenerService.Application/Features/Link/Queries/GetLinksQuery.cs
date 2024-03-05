@@ -1,5 +1,7 @@
 using AutoMapper;
 using Google.Protobuf.Collections;
+using LinkShortenerService.Application.Base;
+using LinkShortenerService.Application.Common;
 using Shared.Protos;
 
 namespace LinkShortenerService.Application.Features.Link.Queries;
@@ -14,12 +16,18 @@ public class GetLinksQueryResultDTO
 	public bool IsActive { get; set; }
 }
 
-public class GetLinksQueryResult
+public class GetLinksQueryResult : QueryResult<IEnumerable<GetLinksQueryResultDTO>, GetLinksQueryResult>
 {
-	public List<GetLinksQueryResultDTO> Links { get; set; }
+	public GetLinksQueryResult(IEnumerable<GetLinksQueryResultDTO> value) : base(value)
+	{
+	}
+
+	public GetLinksQueryResult(Error error) : base(error)
+	{
+	}
 }
 
-public class GetLinksQueryMappingProfile : Profile
+public class GetLinksQueryMappingProfile: Profile
 {
 	public GetLinksQueryMappingProfile()
 	{
@@ -27,45 +35,51 @@ public class GetLinksQueryMappingProfile : Profile
 	}
 }
 
-public class GetLinksQuery : IRequest<GetLinksQueryResult>
+
+
+public class GetLinksQuery: IRequest<GetLinksQueryResult>
 {
 }
 
-public class GetLinksQueryHandler : IRequestHandler<GetLinksQuery, GetLinksQueryResult>
+public class GetLinksQueryHandler: BaseQueryHandler<GetLinksQuery, GetLinksQueryResult>
 {
-	IMapper mapper;
+	readonly IMapper mapper;
 
-	public GetLinksQueryHandler(IMapper mapper)
+	public GetLinksQueryHandler(IMapper mapper) : base(mapper)
 	{
 		this.mapper = mapper;
 	}
 
-	public async Task<GetLinksQueryResult> Handle(GetLinksQuery request, CancellationToken cancellationToken)
+	public override async Task<GetLinksQueryResult> Handle(GetLinksQuery request, CancellationToken cancellationToken)
 	{
-		var rpcChannel = GrpcChannel.ForAddress("http://localhost:5256");
-		var client = new LinkProtoService.LinkProtoServiceClient(rpcChannel);
-
-		var rpcResponse = await client.GetLinksAsync(new GetLinksRequest(), cancellationToken: cancellationToken);
-
-		var result = new GetLinksQueryResult();
-		result.Links = [];
-
-		foreach (var link in rpcResponse.Links)
+		try
 		{
-			var linkDTO = new GetLinksQueryResultDTO
+			var rpcChannel = GrpcChannel.ForAddress("http://localhost:5256");
+			var client = new LinkProtoService.LinkProtoServiceClient(rpcChannel);
+
+			var rpcResponse = await client.GetLinksAsync(new GetLinksRequest(), cancellationToken: cancellationToken);
+			var resultDTOs = new List<GetLinksQueryResultDTO>();
+
+			foreach (var link in rpcResponse.Links)
 			{
-				Id = link.Id,
-				OriginalUrl = link.OriginalUrl,
-				ShortUrl = link.ShortUrl,
-				CreationDateAndTime = link.CreationDateAndTime.ToDateTime(),
-				ExpirationDateAndTime = link.ExpirationDateAndTime?.ToDateTime(),
-				IsActive = link.IsActive
-			};
+				var linkDTO = new GetLinksQueryResultDTO
+				{
+					Id = link.Id,
+					OriginalUrl = link.OriginalUrl,
+					ShortUrl = link.ShortUrl,
+					CreationDateAndTime = link.CreationDateAndTime.ToDateTime(),
+					ExpirationDateAndTime = link.ExpirationDateAndTime?.ToDateTime(),
+					IsActive = link.IsActive
+				};
 
+				resultDTOs.Add(linkDTO);
+			}
 
-			result.Links.Add(linkDTO);
+			return GetLinksQueryResult.Succeeded(resultDTOs);
 		}
-
-		return result;
+		catch (Exception ex)
+		{
+			return GetLinksQueryResult.Failed(ex);
+		}
 	}
 }
