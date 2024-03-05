@@ -21,11 +21,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Shared\Shared.Protos\Shared.Protos.csproj" />
+    <ProjectReference Include="..\..\Shared\Shared.Database.RPC\Shared.Database.RPC.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
+  <!-- <ItemGroup>
     <protobuf Include="..\..\Shared\Shared.Protos\Protos\Link.proto" GrpcServices="Client" />
-  </ItemGroup>
+  </ItemGroup> -->
 
 </Project>

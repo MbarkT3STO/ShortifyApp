@@ -1,4 +1,4 @@
-namespace LinkShortenerService.Application.RPC;
+namespace Shared.Database.RPC.Client;
 
 /// <summary>
 /// Provides a wrapper for an RPC client.

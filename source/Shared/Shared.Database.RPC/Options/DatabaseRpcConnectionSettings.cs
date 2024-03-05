@@ -1,9 +1,9 @@
-namespace LinkShortenerService.Application.Options;
+namespace Shared.Database.RPC.Options;
 
 /// <summary>
 /// Represents the connection settings for the RPC service to connect to the database service.
 /// </summary>
-public class RpcConnectionSettingsForDatabaseService
+public class DatabaseRpcConnectionSettings
 {
 	/// <summary>
 	/// Gets or sets the host of the database service.

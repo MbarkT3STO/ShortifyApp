@@ -1,3 +1,5 @@
+using Shared.Database.RPC.Client;
+
 namespace LinkShortenerService.Application.Base;
 
 
@@ -14,7 +16,7 @@ public abstract class BaseCommandHandler<TCommand, TCommandResult>: IRequestHand
 
 	protected BaseCommandHandler(IMapper mapper)
 	{
-		_mapper = mapper;
+		_mapper   = mapper;
 		_mediator = null!;
 	}
 
@@ -42,13 +44,23 @@ public abstract class BaseCommandHandler<TCommand, TCommandResult, TCommandResul
 {
 	private protected readonly IMediator _mediator;
 	private protected readonly IMapper _mapper;
+	private protected readonly DatabaseRpcClientContext _rpcClientContext;
 
 
 	protected BaseCommandHandler(IMapper mapper)
 	{
-		_mapper = mapper;
+		_mapper   = mapper;
 		_mediator = null!;
 	}
+
+
+	protected BaseCommandHandler(IMapper mapper, DatabaseRpcClientContext rpcClientContext)
+	{
+		_mapper           = mapper;
+		_rpcClientContext = rpcClientContext;
+		_mediator         = null!;
+	}
+
 
 	protected BaseCommandHandler(IMediator mediator, IMapper mapper)
 	{

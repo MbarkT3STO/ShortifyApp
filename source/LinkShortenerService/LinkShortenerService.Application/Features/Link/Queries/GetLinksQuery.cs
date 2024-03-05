@@ -2,6 +2,7 @@ using AutoMapper;
 using Google.Protobuf.Collections;
 using LinkShortenerService.Application.Base;
 using LinkShortenerService.Application.Common;
+using Shared.Database.RPC.Client;
 using Shared.Protos;
 
 namespace LinkShortenerService.Application.Features.Link.Queries;
@@ -43,21 +44,15 @@ public class GetLinksQuery: IRequest<GetLinksQueryResult>
 
 public class GetLinksQueryHandler: BaseQueryHandler<GetLinksQuery, GetLinksQueryResult>
 {
-	readonly IMapper mapper;
-
-	public GetLinksQueryHandler(IMapper mapper) : base(mapper)
+	public GetLinksQueryHandler(IMapper mapper, DatabaseRpcClientContext rpcClientContext) : base(mapper, rpcClientContext)
 	{
-		this.mapper = mapper;
 	}
 
 	public override async Task<GetLinksQueryResult> Handle(GetLinksQuery request, CancellationToken cancellationToken)
 	{
 		try
 		{
-			var rpcChannel = GrpcChannel.ForAddress("http://localhost:5256");
-			var client = new LinkProtoService.LinkProtoServiceClient(rpcChannel);
-
-			var rpcResponse = await client.GetLinksAsync(new GetLinksRequest(), cancellationToken: cancellationToken);
+			var rpcResponse = await _rpcClientContext.LinkClient.Client.GetLinksAsync(new GetLinksRequest(), cancellationToken: cancellationToken);
 			var resultDTOs = new List<GetLinksQueryResultDTO>();
 
 			foreach (var link in rpcResponse.Links)

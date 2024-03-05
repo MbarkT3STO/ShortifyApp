@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
-using LinkShortenerService.Application.Options;
-using LinkShortenerService.Application.RPC;
 using Microsoft.Extensions.DependencyInjection;
+using Shared.Database.RPC.Options;
+using Shared.Database.RPC.Client;
 
 namespace LinkShortenerService.Application.DI;
 
@@ -21,13 +21,13 @@ public static class ApplicationDIExtensions
 		services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 		services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(AppDomain.CurrentDomain.GetAssemblies()));
 
-		services.Configure<RpcConnectionSettingsForDatabaseService>(options =>
+		services.Configure<DatabaseRpcConnectionSettings>(options =>
 		{
 			options.Host = "http://localhost";
 			options.Port = 5256;
 		});
 
-		services.AddSingleton<DatabaseRpcClientProvider>();
+		services.AddSingleton<DatabaseRpcClientContext>();
 
 		return services;
 	}

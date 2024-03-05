@@ -1,4 +1,5 @@
 using Google.Protobuf.WellKnownTypes;
+using Shared.Database.RPC.Client;
 
 namespace LinkShortenerService.Application.Features.Link.Commands;
 
@@ -57,30 +58,24 @@ public class CreateLinkCommand: IRequest<CreateLinkCommandResult>
 
 public class CreateLinkCommandHandler: BaseCommandHandler<CreateLinkCommand, CreateLinkCommandResult, CreateLinkCommandResultDTO>
 {
-	readonly IMapper mapper;
-
-
-	public CreateLinkCommandHandler(IMapper mapper): base(mapper)
+	public CreateLinkCommandHandler(IMapper mapper, DatabaseRpcClientContext rpcClientContext) : base(mapper, rpcClientContext)
 	{
-		this.mapper = mapper;
 	}
 
 	public override async Task<CreateLinkCommandResult> Handle(CreateLinkCommand request, CancellationToken cancellationToken)
 	{
 		try
 		{
-			var rpcChannel = GrpcChannel.ForAddress("http://localhost:5256");
-			var rpcClient  = new LinkProtoService.LinkProtoServiceClient(rpcChannel);
 			var rpcRequest = _mapper.Map<CreateLinkRequest>(request);
 
 			var (Code, ShortUrl)               = ShortenUrl(request.OriginalUrl);
-			    rpcRequest.ShortUrl            = ShortUrl;
-			    rpcRequest.CreationDateAndTime = DateTime.UtcNow.ToTimestamp();
-			    rpcRequest.IsActive            = true;
+				rpcRequest.ShortUrl            = ShortUrl;
+				rpcRequest.CreationDateAndTime = DateTime.UtcNow.ToTimestamp();
+				rpcRequest.IsActive            = true;
 
-			var rpcResponse = await rpcClient.CreateLinkAsync(rpcRequest, cancellationToken: cancellationToken);
+			var rpcResponse = await _rpcClientContext.LinkClient.Client.CreateLinkAsync(rpcRequest, cancellationToken: cancellationToken);
 
-			var resultDTO = mapper.Map<CreateLinkCommandResultDTO>(rpcResponse);
+			var resultDTO = _mapper.Map<CreateLinkCommandResultDTO>(rpcResponse);
 
 			return CreateLinkCommandResult.Succeeded(resultDTO);
 		}
