@@ -19,6 +19,21 @@ public class LinkService(AppDbContext dbContext, IMapper mapper): LinkProtoServi
 		return response;
 	}
 
+	public override async Task<GetLinkByIdResponse> GetLinkById(GetLinkByIdRequest request, ServerCallContext context)
+	{
+		var link = await _dbContext.Links.FindAsync(request.Id);
+
+		if (link == null) throw new RpcException(new Status(StatusCode.NotFound, "Link not found"));
+
+		var responseDTO = _mapper.Map<GetLinkByIdResponseDTO>(link);
+		var response    = new GetLinkByIdResponse
+		{
+			Link = responseDTO
+		};
+
+		return response;
+	}
+
 	public override async Task<CreateLinkResponse> CreateLink(CreateLinkRequest request, ServerCallContext context)
 	{
 		var link = _mapper.Map<Link>(request);

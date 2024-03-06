@@ -29,9 +29,23 @@ public class LinksController: ControllerBase
 		return BadRequest(result.Error);
 	}
 
+	[HttpGet("{id}")]
+	public async Task<IActionResult> GetById(int id)
+	{
+		var result = await mediator.Send(new GetLinkByIdQuery(id));
 
-	[HttpPost]
-	public async Task<IActionResult> CreateLink([FromBody] CreateLinkCommand command)
+		if (result.IsSuccess)
+		{
+			return Ok(result.Value);
+		}
+
+		return BadRequest(result.Error?.Message);
+	}
+
+
+
+	[HttpPost(nameof(Create))]
+	public async Task<IActionResult> Create([FromBody] CreateLinkCommand command)
 	{
 		var result = await mediator.Send(command);
 

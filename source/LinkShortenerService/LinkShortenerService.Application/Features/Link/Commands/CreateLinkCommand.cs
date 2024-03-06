@@ -1,6 +1,3 @@
-using Google.Protobuf.WellKnownTypes;
-using Shared.Database.RPC.Client;
-
 namespace LinkShortenerService.Application.Features.Link.Commands;
 
 public class CreateLinkCommandResultDTO
@@ -62,18 +59,18 @@ public class CreateLinkCommandHandler: BaseCommandHandler<CreateLinkCommand, Cre
 	{
 	}
 
-	public override async Task<CreateLinkCommandResult> Handle(CreateLinkCommand request, CancellationToken cancellationToken)
+	public override async Task<CreateLinkCommandResult> Handle(CreateLinkCommand command, CancellationToken cancellationToken)
 	{
 		try
 		{
-			var rpcRequest = _mapper.Map<CreateLinkRequest>(request);
+			var rpcRequest = _mapper.Map<CreateLinkRequest>(command);
 
-			var (Code, ShortUrl)               = ShortenUrl(request.OriginalUrl);
+			var (Code, ShortUrl)               = ShortenUrl(command.OriginalUrl);
 				rpcRequest.ShortUrl            = ShortUrl;
 				rpcRequest.CreationDateAndTime = DateTime.UtcNow.ToTimestamp();
 				rpcRequest.IsActive            = true;
 
-			var rpcResponse = await _rpcClientContext.LinkClient.Client.CreateLinkAsync(rpcRequest, cancellationToken: cancellationToken);
+			var rpcResponse = await _rpcClientContext.Links.CreateLinkAsync(rpcRequest, cancellationToken: cancellationToken);
 
 			var resultDTO = _mapper.Map<CreateLinkCommandResultDTO>(rpcResponse);
 

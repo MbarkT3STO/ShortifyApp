@@ -23,6 +23,7 @@ public class DatabaseRpcClientContext : IDisposable, IAsyncDisposable
 	public DatabaseRpcConnectionSettings Settings { get; }
 
 	public RpcClientProvider<LinkProtoService.LinkProtoServiceClient> LinkClient { get; private set; }
+	public LinkProtoService.LinkProtoServiceClient Links => LinkClient.Client;
 
 
 	public DatabaseRpcClientContext(IOptions<DatabaseRpcConnectionSettings> options)

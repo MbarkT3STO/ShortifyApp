@@ -1,10 +1,3 @@
-using AutoMapper;
-using Google.Protobuf.Collections;
-using LinkShortenerService.Application.Base;
-using LinkShortenerService.Application.Common;
-using Shared.Database.RPC.Client;
-using Shared.Protos;
-
 namespace LinkShortenerService.Application.Features.Link.Queries;
 
 public class GetLinksQueryResultDTO
@@ -48,11 +41,11 @@ public class GetLinksQueryHandler: BaseQueryHandler<GetLinksQuery, GetLinksQuery
 	{
 	}
 
-	public override async Task<GetLinksQueryResult> Handle(GetLinksQuery request, CancellationToken cancellationToken)
+	public override async Task<GetLinksQueryResult> Handle(GetLinksQuery query, CancellationToken cancellationToken)
 	{
 		try
 		{
-			var rpcResponse = await _rpcClientContext.LinkClient.Client.GetLinksAsync(new GetLinksRequest(), cancellationToken: cancellationToken);
+			var rpcResponse = await _rpcClientContext.Links.GetLinksAsync(new GetLinksRequest(), cancellationToken: cancellationToken);
 			var resultDTOs = new List<GetLinksQueryResultDTO>();
 
 			foreach (var link in rpcResponse.Links)

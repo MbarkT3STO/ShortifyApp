@@ -50,6 +50,10 @@ namespace Shared.Protos {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Shared.Protos.GetLinksResponse> __Marshaller_GetLinksResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Shared.Protos.GetLinksResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Shared.Protos.GetLinkByIdRequest> __Marshaller_GetLinkByIdRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Shared.Protos.GetLinkByIdRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Shared.Protos.GetLinkByIdResponse> __Marshaller_GetLinkByIdResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Shared.Protos.GetLinkByIdResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Shared.Protos.CreateLinkRequest> __Marshaller_CreateLinkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Shared.Protos.CreateLinkRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Shared.Protos.CreateLinkResponse> __Marshaller_CreateLinkResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Shared.Protos.CreateLinkResponse.Parser));
@@ -61,6 +65,14 @@ namespace Shared.Protos {
         "GetLinks",
         __Marshaller_GetLinksRequest,
         __Marshaller_GetLinksResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Shared.Protos.GetLinkByIdRequest, global::Shared.Protos.GetLinkByIdResponse> __Method_GetLinkById = new grpc::Method<global::Shared.Protos.GetLinkByIdRequest, global::Shared.Protos.GetLinkByIdResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetLinkById",
+        __Marshaller_GetLinkByIdRequest,
+        __Marshaller_GetLinkByIdResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Shared.Protos.CreateLinkRequest, global::Shared.Protos.CreateLinkResponse> __Method_CreateLink = new grpc::Method<global::Shared.Protos.CreateLinkRequest, global::Shared.Protos.CreateLinkResponse>(
@@ -122,6 +134,26 @@ namespace Shared.Protos {
       public virtual grpc::AsyncUnaryCall<global::Shared.Protos.GetLinksResponse> GetLinksAsync(global::Shared.Protos.GetLinksRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetLinks, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Shared.Protos.GetLinkByIdResponse GetLinkById(global::Shared.Protos.GetLinkByIdRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetLinkById(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Shared.Protos.GetLinkByIdResponse GetLinkById(global::Shared.Protos.GetLinkByIdRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetLinkById, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Shared.Protos.GetLinkByIdResponse> GetLinkByIdAsync(global::Shared.Protos.GetLinkByIdRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetLinkByIdAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Shared.Protos.GetLinkByIdResponse> GetLinkByIdAsync(global::Shared.Protos.GetLinkByIdRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetLinkById, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Shared.Protos.CreateLinkResponse CreateLink(global::Shared.Protos.CreateLinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))

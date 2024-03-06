@@ -6,7 +6,10 @@ option csharp_namespace = "Shared.Protos";
 
 service LinkProtoService {
     rpc GetLinks(GetLinksRequest) returns (GetLinksResponse);
+    rpc GetLinkById(GetLinkByIdRequest) returns (GetLinkByIdResponse);
+
     rpc CreateLink(CreateLinkRequest) returns (CreateLinkResponse);
+
 }
 
 
@@ -30,6 +33,26 @@ message GetLinksResponseDTO{
     bool                      isActive              = 6;
 }
 
+
+
+// Region: GetLinkById
+
+message GetLinkByIdRequest {
+    int32 id = 1;
+}
+
+message GetLinkByIdResponse {
+    GetLinkByIdResponseDTO link = 1;
+}
+
+message GetLinkByIdResponseDTO{
+    int32                     id                    = 1;
+    string                    originalUrl           = 2;
+    string                    shortUrl              = 3;
+    google.protobuf.Timestamp creationDateAndTime   = 4;
+    google.protobuf.Timestamp expirationDateAndTime = 5;
+    bool                      isActive              = 6;
+}
 
 
 

@@ -26,7 +26,7 @@ public abstract class BaseCommandHandler<TCommand, TCommandResult>: IRequestHand
 		_mapper   = mapper;
 	}
 
-	public Task<TCommandResult> Handle(TCommand request, CancellationToken cancellationToken)
+	public Task<TCommandResult> Handle(TCommand command, CancellationToken cancellationToken)
 	{
 		throw new NotImplementedException();
 	}
@@ -69,7 +69,7 @@ public abstract class BaseCommandHandler<TCommand, TCommandResult, TCommandResul
 	}
 
 
-	public virtual Task<TCommandResult> Handle(TCommand request, CancellationToken cancellationToken)
+	public virtual Task<TCommandResult> Handle(TCommand command, CancellationToken cancellationToken)
 	{
 		throw new NotImplementedException();
 	}

@@ -19,7 +19,7 @@ public abstract class BaseQueryHandler<TQuery, TResponse>: IRequestHandler<TQuer
 		_rpcClientContext = rpcClientContext;
 	}
 
-	public virtual async Task<TResponse> Handle(TQuery request, CancellationToken cancellationToken)
+	public virtual async Task<TResponse> Handle(TQuery query, CancellationToken cancellationToken)
 	{
 		return await Task.FromResult(default(TResponse));
 	}

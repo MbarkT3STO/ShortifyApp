@@ -10,7 +10,11 @@ global using MediatR;
 
 global using Grpc.Core;
 global using Grpc.Net.Client;
+global using Google.Protobuf.WellKnownTypes;
+
+
 global using Shared.Protos;
+global using Shared.Database.RPC.Client;
 
 
 global using LinkShortenerService.Application.Interfaces;
