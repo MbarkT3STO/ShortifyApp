@@ -1,11 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
 using Shared.Database.RPC.Options;
-using Shared.Database.RPC.Client;
 
 namespace LinkShortenerService.Application.DI;
 

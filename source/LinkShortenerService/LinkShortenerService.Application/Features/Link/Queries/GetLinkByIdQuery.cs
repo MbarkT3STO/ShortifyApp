@@ -53,8 +53,8 @@ public class GetLinkByIdQueryMappingProfile: Profile
 			.ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Link.Id))
 			.ForMember(dest => dest.OriginalUrl, opt => opt.MapFrom(src => src.Link.OriginalUrl))
 			.ForMember(dest => dest.ShortUrl, opt => opt.MapFrom(src => src.Link.ShortUrl))
-			.ForMember(dest => dest.CreationDateAndTime, opt => opt.MapFrom(src => src.Link.CreationDateAndTime.ToDateTime()))
-			.ForMember(dest => dest.ExpirationDateAndTime, opt => opt.MapFrom(src => src.Link.ExpirationDateAndTime.ToDateTime()))
+			.ForMember(dest => dest.CreationDateAndTime, opt => opt.MapFrom<GoogleTimestampToDateTimeValueResolver>())
+			.ForMember(dest => dest.ExpirationDateAndTime, opt => opt.MapFrom<GoogleTimestampToDateTimeValueResolver>())
 			.ForMember(dest => dest.IsActive, opt => opt.MapFrom(src => src.Link.IsActive));
 	}
 }
@@ -64,14 +64,9 @@ public class GetLinkByIdQueryMappingProfile: Profile
 /// <summary>
 /// Represents a query to retrieve a link by its ID.
 /// </summary>
-public class GetLinkByIdQuery: IRequest<GetLinkByIdQueryResult>
+public class GetLinkByIdQuery(int id) : IRequest<GetLinkByIdQueryResult>
 {
-	public int Id { get; }
-
-	public GetLinkByIdQuery(int id)
-	{
-		Id = id;
-	}
+    public int Id { get; } = id;
 }
 
 public class GetLinkByIdQueryHandler(IMapper mapper, DatabaseRpcClientContext rpcClientContext): BaseQueryHandler<GetLinkByIdQuery, GetLinkByIdQueryResult>(mapper, rpcClientContext)
