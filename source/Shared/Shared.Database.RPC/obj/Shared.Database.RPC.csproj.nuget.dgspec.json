@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\MBARK.AzureAD\\source\\repos\\ShortifyApp\\source\\Shared\\Shared.Database.RPC\\Shared.Database.RPC.csproj": {}
+    "C:\\Users\\MBARK.AzureAD\\source\\repos\\ShortifyApp\\source\\Shared\\Shared.Database.RPC\\Shared.Database.RPC.csproj": {}
   },
   "projects": {
-    "c:\\Users\\MBARK.AzureAD\\source\\repos\\ShortifyApp\\source\\Shared\\Shared.Database.RPC\\Shared.Database.RPC.csproj": {
+    "C:\\Users\\MBARK.AzureAD\\source\\repos\\ShortifyApp\\source\\Shared\\Shared.Database.RPC\\Shared.Database.RPC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\MBARK.AzureAD\\source\\repos\\ShortifyApp\\source\\Shared\\Shared.Database.RPC\\Shared.Database.RPC.csproj",
+        "projectUniqueName": "C:\\Users\\MBARK.AzureAD\\source\\repos\\ShortifyApp\\source\\Shared\\Shared.Database.RPC\\Shared.Database.RPC.csproj",
         "projectName": "Shared.Database.RPC",
-        "projectPath": "c:\\Users\\MBARK.AzureAD\\source\\repos\\ShortifyApp\\source\\Shared\\Shared.Database.RPC\\Shared.Database.RPC.csproj",
+        "projectPath": "C:\\Users\\MBARK.AzureAD\\source\\repos\\ShortifyApp\\source\\Shared\\Shared.Database.RPC\\Shared.Database.RPC.csproj",
         "packagesPath": "C:\\Users\\MBARK.AzureAD\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\MBARK.AzureAD\\source\\repos\\ShortifyApp\\source\\Shared\\Shared.Database.RPC\\obj\\",
+        "outputPath": "C:\\Users\\MBARK.AzureAD\\source\\repos\\ShortifyApp\\source\\Shared\\Shared.Database.RPC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MBARK.AzureAD\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "c:\\Users\\MBARK.AzureAD\\source\\repos\\ShortifyApp\\source\\Shared\\Shared.Protos\\Shared.Protos.csproj": {
-                "projectPath": "c:\\Users\\MBARK.AzureAD\\source\\repos\\ShortifyApp\\source\\Shared\\Shared.Protos\\Shared.Protos.csproj"
+              "C:\\Users\\MBARK.AzureAD\\source\\repos\\ShortifyApp\\source\\Shared\\Shared.Protos\\Shared.Protos.csproj": {
+                "projectPath": "C:\\Users\\MBARK.AzureAD\\source\\repos\\ShortifyApp\\source\\Shared\\Shared.Protos\\Shared.Protos.csproj"
               }
             }
           }
@@ -87,14 +87,14 @@
         }
       }
     },
-    "c:\\Users\\MBARK.AzureAD\\source\\repos\\ShortifyApp\\source\\Shared\\Shared.Protos\\Shared.Protos.csproj": {
+    "C:\\Users\\MBARK.AzureAD\\source\\repos\\ShortifyApp\\source\\Shared\\Shared.Protos\\Shared.Protos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\MBARK.AzureAD\\source\\repos\\ShortifyApp\\source\\Shared\\Shared.Protos\\Shared.Protos.csproj",
+        "projectUniqueName": "C:\\Users\\MBARK.AzureAD\\source\\repos\\ShortifyApp\\source\\Shared\\Shared.Protos\\Shared.Protos.csproj",
         "projectName": "Shared.Protos",
-        "projectPath": "c:\\Users\\MBARK.AzureAD\\source\\repos\\ShortifyApp\\source\\Shared\\Shared.Protos\\Shared.Protos.csproj",
+        "projectPath": "C:\\Users\\MBARK.AzureAD\\source\\repos\\ShortifyApp\\source\\Shared\\Shared.Protos\\Shared.Protos.csproj",
         "packagesPath": "C:\\Users\\MBARK.AzureAD\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\MBARK.AzureAD\\source\\repos\\ShortifyApp\\source\\Shared\\Shared.Protos\\obj\\",
+        "outputPath": "C:\\Users\\MBARK.AzureAD\\source\\repos\\ShortifyApp\\source\\Shared\\Shared.Protos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MBARK.AzureAD\\AppData\\Roaming\\NuGet\\NuGet.Config",

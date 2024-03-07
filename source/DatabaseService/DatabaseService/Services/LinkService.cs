@@ -6,7 +6,7 @@ namespace DatabaseService.Services;
 public class LinkService(AppDbContext dbContext, IMapper mapper): LinkProtoService.LinkProtoServiceBase
 {
 	readonly AppDbContext _dbContext = dbContext;
-	readonly IMapper _mapper = mapper;
+	readonly IMapper _mapper         = mapper;
 
 
 	public override async Task<GetLinksResponse> GetLinks(GetLinksRequest request, ServerCallContext context)
@@ -48,6 +48,24 @@ public class LinkService(AppDbContext dbContext, IMapper mapper): LinkProtoServi
 		{
 			Link = _mapper.Map<CreateLinkResponseDTO>(link)
 		};
+
+		return response;
+	}
+
+	public override async Task<DeactivateLinkResponse> DeactivateLink(DeactivateLinkRequest request, ServerCallContext context)
+	{
+		var link = await _dbContext.Links.FindAsync(request.Id);
+
+		if (link == null) throw new RpcException(new Status(StatusCode.NotFound, "Link not found"));
+
+		link.IsActive = false;
+
+		await _dbContext.SaveChangesAsync();
+
+		var response      = new DeactivateLinkResponse();
+		var responseDTO   = _mapper.Map<DeactivateLinkResponseDTO>(link);
+
+		response.Link = responseDTO;
 
 		return response;
 	}

@@ -10,6 +10,8 @@ service LinkProtoService {
 
     rpc CreateLink(CreateLinkRequest) returns (CreateLinkResponse);
 
+    rpc DeactivateLink(DeactivateLinkRequest) returns (DeactivateLinkResponse);
+
 }
 
 
@@ -79,3 +81,23 @@ message CreateLinkResponseDTO{
     bool                      isActive              = 6;
 }
 
+
+
+// Region: DeactivateLink
+
+message DeactivateLinkRequest {
+    int32 id = 1;
+}
+
+message DeactivateLinkResponse {
+    DeactivateLinkResponseDTO link = 1;
+}
+
+message DeactivateLinkResponseDTO{
+    int32                     id                    = 1;
+    string                    originalUrl           = 2;
+    string                    shortUrl              = 3;
+    google.protobuf.Timestamp creationDateAndTime   = 4;
+    google.protobuf.Timestamp expirationDateAndTime = 5;
+    bool                      isActive              = 6;
+}

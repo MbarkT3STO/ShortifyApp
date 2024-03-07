@@ -48,12 +48,20 @@ namespace Shared.Protos {
             "bBgCIAEoCRIQCghzaG9ydFVybBgDIAEoCRI3ChNjcmVhdGlvbkRhdGVBbmRU",
             "aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI5ChVleHBp",
             "cmF0aW9uRGF0ZUFuZFRpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wEhAKCGlzQWN0aXZlGAYgASgIMrQBChBMaW5rUHJvdG9TZXJ2aWNl",
-            "Ei8KCEdldExpbmtzEhAuR2V0TGlua3NSZXF1ZXN0GhEuR2V0TGlua3NSZXNw",
-            "b25zZRI4CgtHZXRMaW5rQnlJZBITLkdldExpbmtCeUlkUmVxdWVzdBoULkdl",
-            "dExpbmtCeUlkUmVzcG9uc2USNQoKQ3JlYXRlTGluaxISLkNyZWF0ZUxpbmtS",
-            "ZXF1ZXN0GhMuQ3JlYXRlTGlua1Jlc3BvbnNlQhCqAg1TaGFyZWQuUHJvdG9z",
-            "YgZwcm90bzM="));
+            "ZXN0YW1wEhAKCGlzQWN0aXZlGAYgASgIIiMKFURlYWN0aXZhdGVMaW5rUmVx",
+            "dWVzdBIKCgJpZBgBIAEoBSJCChZEZWFjdGl2YXRlTGlua1Jlc3BvbnNlEigK",
+            "BGxpbmsYASABKAsyGi5EZWFjdGl2YXRlTGlua1Jlc3BvbnNlRFRPItQBChlE",
+            "ZWFjdGl2YXRlTGlua1Jlc3BvbnNlRFRPEgoKAmlkGAEgASgFEhMKC29yaWdp",
+            "bmFsVXJsGAIgASgJEhAKCHNob3J0VXJsGAMgASgJEjcKE2NyZWF0aW9uRGF0",
+            "ZUFuZFRpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjkK",
+            "FWV4cGlyYXRpb25EYXRlQW5kVGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5UaW1lc3RhbXASEAoIaXNBY3RpdmUYBiABKAgy9wEKEExpbmtQcm90b1Nl",
+            "cnZpY2USLwoIR2V0TGlua3MSEC5HZXRMaW5rc1JlcXVlc3QaES5HZXRMaW5r",
+            "c1Jlc3BvbnNlEjgKC0dldExpbmtCeUlkEhMuR2V0TGlua0J5SWRSZXF1ZXN0",
+            "GhQuR2V0TGlua0J5SWRSZXNwb25zZRI1CgpDcmVhdGVMaW5rEhIuQ3JlYXRl",
+            "TGlua1JlcXVlc3QaEy5DcmVhdGVMaW5rUmVzcG9uc2USQQoORGVhY3RpdmF0",
+            "ZUxpbmsSFi5EZWFjdGl2YXRlTGlua1JlcXVlc3QaFy5EZWFjdGl2YXRlTGlu",
+            "a1Jlc3BvbnNlQhCqAg1TaGFyZWQuUHJvdG9zYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -65,7 +73,10 @@ namespace Shared.Protos {
             new pbr::GeneratedClrTypeInfo(typeof(global::Shared.Protos.GetLinkByIdResponseDTO), global::Shared.Protos.GetLinkByIdResponseDTO.Parser, new[]{ "Id", "OriginalUrl", "ShortUrl", "CreationDateAndTime", "ExpirationDateAndTime", "IsActive" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Shared.Protos.CreateLinkRequest), global::Shared.Protos.CreateLinkRequest.Parser, new[]{ "OriginalUrl", "ShortUrl", "CreationDateAndTime", "ExpirationDateAndTime", "IsActive" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Shared.Protos.CreateLinkResponse), global::Shared.Protos.CreateLinkResponse.Parser, new[]{ "Link" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Shared.Protos.CreateLinkResponseDTO), global::Shared.Protos.CreateLinkResponseDTO.Parser, new[]{ "Id", "OriginalUrl", "ShortUrl", "CreationDateAndTime", "ExpirationDateAndTime", "IsActive" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Shared.Protos.CreateLinkResponseDTO), global::Shared.Protos.CreateLinkResponseDTO.Parser, new[]{ "Id", "OriginalUrl", "ShortUrl", "CreationDateAndTime", "ExpirationDateAndTime", "IsActive" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Shared.Protos.DeactivateLinkRequest), global::Shared.Protos.DeactivateLinkRequest.Parser, new[]{ "Id" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Shared.Protos.DeactivateLinkResponse), global::Shared.Protos.DeactivateLinkResponse.Parser, new[]{ "Link" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Shared.Protos.DeactivateLinkResponseDTO), global::Shared.Protos.DeactivateLinkResponseDTO.Parser, new[]{ "Id", "OriginalUrl", "ShortUrl", "CreationDateAndTime", "ExpirationDateAndTime", "IsActive" }, null, null, null, null)
           }));
     }
     #endregion
@@ -2403,6 +2414,788 @@ namespace Shared.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(CreateLinkResponseDTO other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Id != 0) {
+        Id = other.Id;
+      }
+      if (other.OriginalUrl.Length != 0) {
+        OriginalUrl = other.OriginalUrl;
+      }
+      if (other.ShortUrl.Length != 0) {
+        ShortUrl = other.ShortUrl;
+      }
+      if (other.creationDateAndTime_ != null) {
+        if (creationDateAndTime_ == null) {
+          CreationDateAndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreationDateAndTime.MergeFrom(other.CreationDateAndTime);
+      }
+      if (other.expirationDateAndTime_ != null) {
+        if (expirationDateAndTime_ == null) {
+          ExpirationDateAndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        ExpirationDateAndTime.MergeFrom(other.ExpirationDateAndTime);
+      }
+      if (other.IsActive != false) {
+        IsActive = other.IsActive;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Id = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            OriginalUrl = input.ReadString();
+            break;
+          }
+          case 26: {
+            ShortUrl = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (creationDateAndTime_ == null) {
+              CreationDateAndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreationDateAndTime);
+            break;
+          }
+          case 42: {
+            if (expirationDateAndTime_ == null) {
+              ExpirationDateAndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ExpirationDateAndTime);
+            break;
+          }
+          case 48: {
+            IsActive = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Id = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            OriginalUrl = input.ReadString();
+            break;
+          }
+          case 26: {
+            ShortUrl = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (creationDateAndTime_ == null) {
+              CreationDateAndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreationDateAndTime);
+            break;
+          }
+          case 42: {
+            if (expirationDateAndTime_ == null) {
+              ExpirationDateAndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ExpirationDateAndTime);
+            break;
+          }
+          case 48: {
+            IsActive = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DeactivateLinkRequest : pb::IMessage<DeactivateLinkRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DeactivateLinkRequest> _parser = new pb::MessageParser<DeactivateLinkRequest>(() => new DeactivateLinkRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DeactivateLinkRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Shared.Protos.LinkReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeactivateLinkRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeactivateLinkRequest(DeactivateLinkRequest other) : this() {
+      id_ = other.id_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeactivateLinkRequest Clone() {
+      return new DeactivateLinkRequest(this);
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private int id_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Id {
+      get { return id_; }
+      set {
+        id_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DeactivateLinkRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DeactivateLinkRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Id != other.Id) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Id != 0) hash ^= Id.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Id != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Id);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Id != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Id);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Id != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Id);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DeactivateLinkRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Id != 0) {
+        Id = other.Id;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Id = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Id = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DeactivateLinkResponse : pb::IMessage<DeactivateLinkResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DeactivateLinkResponse> _parser = new pb::MessageParser<DeactivateLinkResponse>(() => new DeactivateLinkResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DeactivateLinkResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Shared.Protos.LinkReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeactivateLinkResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeactivateLinkResponse(DeactivateLinkResponse other) : this() {
+      link_ = other.link_ != null ? other.link_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeactivateLinkResponse Clone() {
+      return new DeactivateLinkResponse(this);
+    }
+
+    /// <summary>Field number for the "link" field.</summary>
+    public const int LinkFieldNumber = 1;
+    private global::Shared.Protos.DeactivateLinkResponseDTO link_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Shared.Protos.DeactivateLinkResponseDTO Link {
+      get { return link_; }
+      set {
+        link_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DeactivateLinkResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DeactivateLinkResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Link, other.Link)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (link_ != null) hash ^= Link.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (link_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Link);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (link_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Link);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (link_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Link);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DeactivateLinkResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.link_ != null) {
+        if (link_ == null) {
+          Link = new global::Shared.Protos.DeactivateLinkResponseDTO();
+        }
+        Link.MergeFrom(other.Link);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (link_ == null) {
+              Link = new global::Shared.Protos.DeactivateLinkResponseDTO();
+            }
+            input.ReadMessage(Link);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (link_ == null) {
+              Link = new global::Shared.Protos.DeactivateLinkResponseDTO();
+            }
+            input.ReadMessage(Link);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DeactivateLinkResponseDTO : pb::IMessage<DeactivateLinkResponseDTO>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DeactivateLinkResponseDTO> _parser = new pb::MessageParser<DeactivateLinkResponseDTO>(() => new DeactivateLinkResponseDTO());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DeactivateLinkResponseDTO> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Shared.Protos.LinkReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeactivateLinkResponseDTO() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeactivateLinkResponseDTO(DeactivateLinkResponseDTO other) : this() {
+      id_ = other.id_;
+      originalUrl_ = other.originalUrl_;
+      shortUrl_ = other.shortUrl_;
+      creationDateAndTime_ = other.creationDateAndTime_ != null ? other.creationDateAndTime_.Clone() : null;
+      expirationDateAndTime_ = other.expirationDateAndTime_ != null ? other.expirationDateAndTime_.Clone() : null;
+      isActive_ = other.isActive_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeactivateLinkResponseDTO Clone() {
+      return new DeactivateLinkResponseDTO(this);
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private int id_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Id {
+      get { return id_; }
+      set {
+        id_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "originalUrl" field.</summary>
+    public const int OriginalUrlFieldNumber = 2;
+    private string originalUrl_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string OriginalUrl {
+      get { return originalUrl_; }
+      set {
+        originalUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "shortUrl" field.</summary>
+    public const int ShortUrlFieldNumber = 3;
+    private string shortUrl_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ShortUrl {
+      get { return shortUrl_; }
+      set {
+        shortUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "creationDateAndTime" field.</summary>
+    public const int CreationDateAndTimeFieldNumber = 4;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp creationDateAndTime_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreationDateAndTime {
+      get { return creationDateAndTime_; }
+      set {
+        creationDateAndTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "expirationDateAndTime" field.</summary>
+    public const int ExpirationDateAndTimeFieldNumber = 5;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp expirationDateAndTime_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp ExpirationDateAndTime {
+      get { return expirationDateAndTime_; }
+      set {
+        expirationDateAndTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "isActive" field.</summary>
+    public const int IsActiveFieldNumber = 6;
+    private bool isActive_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsActive {
+      get { return isActive_; }
+      set {
+        isActive_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DeactivateLinkResponseDTO);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DeactivateLinkResponseDTO other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Id != other.Id) return false;
+      if (OriginalUrl != other.OriginalUrl) return false;
+      if (ShortUrl != other.ShortUrl) return false;
+      if (!object.Equals(CreationDateAndTime, other.CreationDateAndTime)) return false;
+      if (!object.Equals(ExpirationDateAndTime, other.ExpirationDateAndTime)) return false;
+      if (IsActive != other.IsActive) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Id != 0) hash ^= Id.GetHashCode();
+      if (OriginalUrl.Length != 0) hash ^= OriginalUrl.GetHashCode();
+      if (ShortUrl.Length != 0) hash ^= ShortUrl.GetHashCode();
+      if (creationDateAndTime_ != null) hash ^= CreationDateAndTime.GetHashCode();
+      if (expirationDateAndTime_ != null) hash ^= ExpirationDateAndTime.GetHashCode();
+      if (IsActive != false) hash ^= IsActive.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Id != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Id);
+      }
+      if (OriginalUrl.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(OriginalUrl);
+      }
+      if (ShortUrl.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(ShortUrl);
+      }
+      if (creationDateAndTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(CreationDateAndTime);
+      }
+      if (expirationDateAndTime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(ExpirationDateAndTime);
+      }
+      if (IsActive != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(IsActive);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Id != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Id);
+      }
+      if (OriginalUrl.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(OriginalUrl);
+      }
+      if (ShortUrl.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(ShortUrl);
+      }
+      if (creationDateAndTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(CreationDateAndTime);
+      }
+      if (expirationDateAndTime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(ExpirationDateAndTime);
+      }
+      if (IsActive != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(IsActive);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Id != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Id);
+      }
+      if (OriginalUrl.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(OriginalUrl);
+      }
+      if (ShortUrl.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ShortUrl);
+      }
+      if (creationDateAndTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreationDateAndTime);
+      }
+      if (expirationDateAndTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExpirationDateAndTime);
+      }
+      if (IsActive != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DeactivateLinkResponseDTO other) {
       if (other == null) {
         return;
       }

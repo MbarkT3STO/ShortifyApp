@@ -57,6 +57,10 @@ namespace Shared.Protos {
     static readonly grpc::Marshaller<global::Shared.Protos.CreateLinkRequest> __Marshaller_CreateLinkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Shared.Protos.CreateLinkRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Shared.Protos.CreateLinkResponse> __Marshaller_CreateLinkResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Shared.Protos.CreateLinkResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Shared.Protos.DeactivateLinkRequest> __Marshaller_DeactivateLinkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Shared.Protos.DeactivateLinkRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Shared.Protos.DeactivateLinkResponse> __Marshaller_DeactivateLinkResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Shared.Protos.DeactivateLinkResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Shared.Protos.GetLinksRequest, global::Shared.Protos.GetLinksResponse> __Method_GetLinks = new grpc::Method<global::Shared.Protos.GetLinksRequest, global::Shared.Protos.GetLinksResponse>(
@@ -81,6 +85,14 @@ namespace Shared.Protos {
         "CreateLink",
         __Marshaller_CreateLinkRequest,
         __Marshaller_CreateLinkResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Shared.Protos.DeactivateLinkRequest, global::Shared.Protos.DeactivateLinkResponse> __Method_DeactivateLink = new grpc::Method<global::Shared.Protos.DeactivateLinkRequest, global::Shared.Protos.DeactivateLinkResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeactivateLink",
+        __Marshaller_DeactivateLinkRequest,
+        __Marshaller_DeactivateLinkResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -174,6 +186,26 @@ namespace Shared.Protos {
       public virtual grpc::AsyncUnaryCall<global::Shared.Protos.CreateLinkResponse> CreateLinkAsync(global::Shared.Protos.CreateLinkRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateLink, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Shared.Protos.DeactivateLinkResponse DeactivateLink(global::Shared.Protos.DeactivateLinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeactivateLink(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Shared.Protos.DeactivateLinkResponse DeactivateLink(global::Shared.Protos.DeactivateLinkRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeactivateLink, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Shared.Protos.DeactivateLinkResponse> DeactivateLinkAsync(global::Shared.Protos.DeactivateLinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeactivateLinkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Shared.Protos.DeactivateLinkResponse> DeactivateLinkAsync(global::Shared.Protos.DeactivateLinkRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeactivateLink, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]

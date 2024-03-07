@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ex06uIMSpkcwDUIMHErGoOlTx3Lw0lTNCmdcAoktZX7eZ6GsMO9v2+0sUHYNbb5fZQPvXy1mjhagI8Tm7CzjQQ==",
+  "dgSpecHash": "FBkWlJZ0zBIsZ3SflHiqtRwYJPowo/aeZNf2wBrXwi2Q9R/0txqhXSsE5/G/CPamKyCQO/SAlHgNpqs3Aso01w==",
   "success": true,
-  "projectFilePath": "c:\\Users\\MBARK.AzureAD\\source\\repos\\ShortifyApp\\source\\LinkShortenerService\\LinkShortenerService.Application\\LinkShortenerService.Application.csproj",
+  "projectFilePath": "C:\\Users\\MBARK.AzureAD\\source\\repos\\ShortifyApp\\source\\LinkShortenerService\\LinkShortenerService.Application\\LinkShortenerService.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MBARK.AzureAD\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\MBARK.AzureAD\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

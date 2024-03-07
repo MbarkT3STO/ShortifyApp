@@ -27,5 +27,9 @@ public class LinkMappingProfile : Profile
 			.ForMember(dest => dest.ExpirationDateAndTime, opt => opt.MapFrom(src => src.ExpirationDateAndTime != null ? src.ExpirationDateAndTime.Value.ToTimestamp() : null));
 
 
+		CreateMap<Link, DeactivateLinkResponseDTO>()
+			.ForMember(dest => dest.CreationDateAndTime, opt => opt.MapFrom(src => src.CreationDateAndTime.ToTimestamp()))
+			.ForMember(dest => dest.ExpirationDateAndTime, opt => opt.MapFrom(src => src.ExpirationDateAndTime != null ? src.ExpirationDateAndTime.Value.ToTimestamp() : null));
+
 	}
 }

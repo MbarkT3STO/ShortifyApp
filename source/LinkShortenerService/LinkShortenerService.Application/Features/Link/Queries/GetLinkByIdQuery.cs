@@ -53,8 +53,8 @@ public class GetLinkByIdQueryMappingProfile: Profile
 			.ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Link.Id))
 			.ForMember(dest => dest.OriginalUrl, opt => opt.MapFrom(src => src.Link.OriginalUrl))
 			.ForMember(dest => dest.ShortUrl, opt => opt.MapFrom(src => src.Link.ShortUrl))
-			.ForMember(dest => dest.CreationDateAndTime, opt => opt.MapFrom<GoogleTimestampToDateTimeValueResolver>())
-			.ForMember(dest => dest.ExpirationDateAndTime, opt => opt.MapFrom<GoogleTimestampToDateTimeValueResolver>())
+			.ForMember(dest => dest.CreationDateAndTime, opt => opt.MapFrom(src => src.Link.CreationDateAndTime.ToDateTime()))
+			.ForMember(dest => dest.ExpirationDateAndTime, opt => opt.MapFrom(src => src.Link.ExpirationDateAndTime.ToDateTime()))
 			.ForMember(dest => dest.IsActive, opt => opt.MapFrom(src => src.Link.IsActive));
 	}
 }

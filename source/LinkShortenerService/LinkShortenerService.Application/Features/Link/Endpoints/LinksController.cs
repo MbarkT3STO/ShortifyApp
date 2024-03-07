@@ -56,4 +56,19 @@ public class LinksController: ControllerBase
 
 		return BadRequest(result.Error?.Message);
 	}
+
+
+
+	[HttpPut(nameof(Deactivate))]
+	public async Task<IActionResult> Deactivate([FromBody] DeactivateLinkCommand command)
+	{
+		var result = await mediator.Send(command);
+
+		if (result.IsSuccess)
+		{
+			return Ok(result.Value);
+		}
+
+		return BadRequest(result.Error?.Message);
+	}
 }
