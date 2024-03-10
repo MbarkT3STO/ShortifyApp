@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JrvHM+wEEn4LhSpwN1Z32xLWRldQecr75kbVnzu5xwIqzbrJrNZp20Q1BZDyloMXAOb5Q3dXUMPYp2hVjJGsfA==",
+  "dgSpecHash": "TxmUDUzVnDqlAyirETo33d43FkyGCG6a8Ry/TOTsAjTWd3WVDkmUDwbJLGcvwIDFh5hK+CSQBEOGTkCU4LQVAA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\MBARK.AzureAD\\source\\repos\\ShortifyApp\\source\\AnalyticsService\\AnalyticsService.App\\AnalyticsService.App.csproj",
+  "projectFilePath": "C:\\Users\\MBARK\\source\\repos\\ShortifyApp\\source\\AnalyticsService\\AnalyticsService.App\\AnalyticsService.App.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

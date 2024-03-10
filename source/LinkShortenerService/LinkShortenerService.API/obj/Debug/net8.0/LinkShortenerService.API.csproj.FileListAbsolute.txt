@@ -113,3 +113,6 @@ C:\Users\MBARK\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortene
 C:\Users\MBARK.AzureAD\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortenerService.API\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 C:\Users\MBARK.AzureAD\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortenerService.API\bin\Debug\net8.0\Shared.Database.RPC.dll
 C:\Users\MBARK.AzureAD\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortenerService.API\bin\Debug\net8.0\Shared.Database.RPC.pdb
+C:\Users\MBARK\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortenerService.API\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\MBARK\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortenerService.API\bin\Debug\net8.0\Shared.Database.RPC.dll
+C:\Users\MBARK\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortenerService.API\bin\Debug\net8.0\Shared.Database.RPC.pdb

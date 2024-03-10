@@ -55,8 +55,10 @@ public class CreateLinkCommand: IRequest<CreateLinkCommandResult>
 
 public class CreateLinkCommandHandler: BaseCommandHandler<CreateLinkCommand, CreateLinkCommandResult, CreateLinkCommandResultDTO>
 {
-	public CreateLinkCommandHandler(IMapper mapper, DatabaseRpcClientContext rpcClientContext) : base(mapper, rpcClientContext)
+	readonly UrlService _urlService;
+	public CreateLinkCommandHandler(IMapper mapper, DatabaseRpcClientContext rpcClientContext, UrlService urlService): base(mapper, rpcClientContext)
 	{
+		_urlService = urlService;
 	}
 
 	public override async Task<CreateLinkCommandResult> Handle(CreateLinkCommand command, CancellationToken cancellationToken)
@@ -65,10 +67,10 @@ public class CreateLinkCommandHandler: BaseCommandHandler<CreateLinkCommand, Cre
 		{
 			var rpcRequest = _mapper.Map<CreateLinkRequest>(command);
 
-			var (Code, ShortUrl)               = ShortenUrl(command.OriginalUrl);
-				rpcRequest.ShortUrl            = ShortUrl;
-				rpcRequest.CreationDateAndTime = DateTime.UtcNow.ToTimestamp();
-				rpcRequest.IsActive            = true;
+			var shortenedUrl                   = _urlService.ShortenUrl(command.OriginalUrl);
+			    rpcRequest.ShortUrl            = shortenedUrl.ShortUrl;
+			    rpcRequest.CreationDateAndTime = DateTime.UtcNow.ToTimestamp();
+			    rpcRequest.IsActive            = true;
 
 			var rpcResponse = await _rpcClientContext.Links.CreateLinkAsync(rpcRequest, cancellationToken: cancellationToken);
 
@@ -80,27 +82,5 @@ public class CreateLinkCommandHandler: BaseCommandHandler<CreateLinkCommand, Cre
 		{
 			return CreateLinkCommandResult.Failed(ex);
 		}
-	}
-
-	(string Code, string ShortUrl) ShortenUrl(string url)
-	{
-		var code     = GenerateShortCode();
-		var shortUrl = $"http://localhost:5211/{code}";
-
-		return (code, shortUrl);
-	}
-
-	string GenerateShortCode()
-	{
-		var chars       = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-		var stringChars = new char[8];
-		var random      = new Random();
-
-		for (int i = 0; i < stringChars.Length; i++)
-		{
-			stringChars[i] = chars[random.Next(chars.Length)];
-		}
-
-		return new string(stringChars);
 	}
 }

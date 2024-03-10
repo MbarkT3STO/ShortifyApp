@@ -21,3 +21,6 @@ global using LinkShortenerService.Application.Interfaces;
 global using LinkShortenerService.Application.Exceptions;
 global using LinkShortenerService.Application.Base;
 global using LinkShortenerService.Application.Common;
+global using LinkShortenerService.Application.Options;
+global using LinkShortenerService.Application.Services;
+

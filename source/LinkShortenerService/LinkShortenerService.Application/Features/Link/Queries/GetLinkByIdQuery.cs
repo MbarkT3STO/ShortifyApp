@@ -66,7 +66,7 @@ public class GetLinkByIdQueryMappingProfile: Profile
 /// </summary>
 public class GetLinkByIdQuery(int id) : IRequest<GetLinkByIdQueryResult>
 {
-    public int Id { get; } = id;
+	public int Id { get; } = id;
 }
 
 public class GetLinkByIdQueryHandler(IMapper mapper, DatabaseRpcClientContext rpcClientContext): BaseQueryHandler<GetLinkByIdQuery, GetLinkByIdQueryResult>(mapper, rpcClientContext)
