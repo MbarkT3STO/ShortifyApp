@@ -1,5 +1,8 @@
 namespace LinkShortenerService.Application.Options;
 
+/// <summary>
+/// Represents the host details for the application.
+/// </summary>
 public class HostDetails
 {
 	/// <summary>

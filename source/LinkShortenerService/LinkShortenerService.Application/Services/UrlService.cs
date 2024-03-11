@@ -15,7 +15,7 @@ public class UrlService(HostDetails hostDetails)
     public ShortenedUrl ShortenUrl(string originalUrl)
 	{
 		var code     = GenerateShortCode();
-		var shortUrl = $"{_hostDetails.Host}/{code}";
+		var shortUrl = $"{_hostDetails.Host}:{_hostDetails.Port}/{code}";
 		var result   = new ShortenedUrl(originalUrl, shortUrl);
 
 		return result;

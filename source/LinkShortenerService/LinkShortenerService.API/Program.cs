@@ -1,3 +1,4 @@
+using LinkShortenerService.API.Middlewares;
 using LinkShortenerService.Application.DI;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -32,7 +33,7 @@ var summaries = new[]
 
 app.MapGet("/weatherforecast", () =>
 {
-	var forecast =  Enumerable.Range(1, 5).Select(index =>
+	var forecast = Enumerable.Range(1, 5).Select(index =>
 		new WeatherForecast
 		(
 			DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
@@ -50,12 +51,10 @@ app.MapGet("/weatherforecast", () =>
 app.UseRouting();
 app.UseCors(cfg => cfg.AllowAnyOrigin());
 
-app.UseEndpoints(endpoints =>
-{
-	endpoints.MapControllers();
-});
+app.MapControllers();
 
-
+// Add middleware for processing the request path
+app.UseMiddleware<PathProcessingMiddleware>();
 
 app.Run();
 

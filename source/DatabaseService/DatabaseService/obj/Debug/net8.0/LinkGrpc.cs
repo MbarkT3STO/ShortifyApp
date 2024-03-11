@@ -54,6 +54,10 @@ namespace Shared.Protos {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Shared.Protos.GetLinkByIdResponse> __Marshaller_GetLinkByIdResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Shared.Protos.GetLinkByIdResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Shared.Protos.GetLinkByCodeRequest> __Marshaller_GetLinkByCodeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Shared.Protos.GetLinkByCodeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Shared.Protos.GetLinkByCodeResponse> __Marshaller_GetLinkByCodeResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Shared.Protos.GetLinkByCodeResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Shared.Protos.CreateLinkRequest> __Marshaller_CreateLinkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Shared.Protos.CreateLinkRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Shared.Protos.CreateLinkResponse> __Marshaller_CreateLinkResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Shared.Protos.CreateLinkResponse.Parser));
@@ -77,6 +81,14 @@ namespace Shared.Protos {
         "GetLinkById",
         __Marshaller_GetLinkByIdRequest,
         __Marshaller_GetLinkByIdResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Shared.Protos.GetLinkByCodeRequest, global::Shared.Protos.GetLinkByCodeResponse> __Method_GetLinkByCode = new grpc::Method<global::Shared.Protos.GetLinkByCodeRequest, global::Shared.Protos.GetLinkByCodeResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetLinkByCode",
+        __Marshaller_GetLinkByCodeRequest,
+        __Marshaller_GetLinkByCodeResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Shared.Protos.CreateLinkRequest, global::Shared.Protos.CreateLinkResponse> __Method_CreateLink = new grpc::Method<global::Shared.Protos.CreateLinkRequest, global::Shared.Protos.CreateLinkResponse>(
@@ -117,6 +129,12 @@ namespace Shared.Protos {
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Shared.Protos.GetLinkByCodeResponse> GetLinkByCode(global::Shared.Protos.GetLinkByCodeRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Shared.Protos.CreateLinkResponse> CreateLink(global::Shared.Protos.CreateLinkRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -138,6 +156,7 @@ namespace Shared.Protos {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_GetLinks, serviceImpl.GetLinks)
           .AddMethod(__Method_GetLinkById, serviceImpl.GetLinkById)
+          .AddMethod(__Method_GetLinkByCode, serviceImpl.GetLinkByCode)
           .AddMethod(__Method_CreateLink, serviceImpl.CreateLink)
           .AddMethod(__Method_DeactivateLink, serviceImpl.DeactivateLink).Build();
     }
@@ -151,6 +170,7 @@ namespace Shared.Protos {
     {
       serviceBinder.AddMethod(__Method_GetLinks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Shared.Protos.GetLinksRequest, global::Shared.Protos.GetLinksResponse>(serviceImpl.GetLinks));
       serviceBinder.AddMethod(__Method_GetLinkById, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Shared.Protos.GetLinkByIdRequest, global::Shared.Protos.GetLinkByIdResponse>(serviceImpl.GetLinkById));
+      serviceBinder.AddMethod(__Method_GetLinkByCode, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Shared.Protos.GetLinkByCodeRequest, global::Shared.Protos.GetLinkByCodeResponse>(serviceImpl.GetLinkByCode));
       serviceBinder.AddMethod(__Method_CreateLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Shared.Protos.CreateLinkRequest, global::Shared.Protos.CreateLinkResponse>(serviceImpl.CreateLink));
       serviceBinder.AddMethod(__Method_DeactivateLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Shared.Protos.DeactivateLinkRequest, global::Shared.Protos.DeactivateLinkResponse>(serviceImpl.DeactivateLink));
     }

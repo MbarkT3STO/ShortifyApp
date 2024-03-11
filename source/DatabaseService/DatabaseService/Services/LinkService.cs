@@ -34,6 +34,22 @@ public class LinkService(AppDbContext dbContext, IMapper mapper): LinkProtoServi
 		return response;
 	}
 
+
+	public override async Task<GetLinkByCodeResponse> GetLinkByCode(GetLinkByCodeRequest request, ServerCallContext context)
+	{
+		var link = await _dbContext.Links.FirstOrDefaultAsync(l => l.ShortUrl.Contains(request.Code));
+
+		if (link == null) throw new RpcException(new Status(StatusCode.NotFound, "Link not found"));
+
+		var responseDTO = _mapper.Map<GetLinkByCodeResponseDTO>(link);
+		var response    = new GetLinkByCodeResponse
+		{
+			Link = responseDTO
+		};
+
+		return response;
+	}
+
 	public override async Task<CreateLinkResponse> CreateLink(CreateLinkRequest request, ServerCallContext context)
 	{
 		var link = _mapper.Map<Link>(request);
@@ -62,8 +78,8 @@ public class LinkService(AppDbContext dbContext, IMapper mapper): LinkProtoServi
 
 		await _dbContext.SaveChangesAsync();
 
-		var response      = new DeactivateLinkResponse();
-		var responseDTO   = _mapper.Map<DeactivateLinkResponseDTO>(link);
+		var response    = new DeactivateLinkResponse();
+		var responseDTO = _mapper.Map<DeactivateLinkResponseDTO>(link);
 
 		response.Link = responseDTO;
 

@@ -71,4 +71,20 @@ public class LinksController: ControllerBase
 
 		return BadRequest(result.Error?.Message);
 	}
+
+
+
+	[HttpGet(nameof(Redirect)+"/{code}")]
+	public async Task<IActionResult> RedirectToOriginalUrl(string code)
+	{
+		var query  = new GetLinkByCodeQuery(code);
+		var result = await mediator.Send(query);
+
+		if (result.IsSuccess)
+		{
+			return Redirect(result.Value.OriginalUrl);
+		}
+
+		return BadRequest(result.Error?.Message);
+	}
 }
