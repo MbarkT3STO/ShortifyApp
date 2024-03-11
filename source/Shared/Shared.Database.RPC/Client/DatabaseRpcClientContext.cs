@@ -8,7 +8,7 @@ namespace Shared.Database.RPC.Client;
 /// <summary>
 /// Provides a gRPC clients for the database service.
 /// </summary>
-public class DatabaseRpcClientContext : IDisposable, IAsyncDisposable
+public class DatabaseRpcClientContext: IDisposable, IAsyncDisposable
 {
 	private readonly GrpcChannel _channel;
 
@@ -25,6 +25,9 @@ public class DatabaseRpcClientContext : IDisposable, IAsyncDisposable
 	public RpcClientProvider<LinkProtoService.LinkProtoServiceClient> LinkClient { get; private set; }
 	public LinkProtoService.LinkProtoServiceClient Links => LinkClient.Client;
 
+	public RpcClientProvider<ClickProtoService.ClickProtoServiceClient> ClickClient { get; private set; }
+	public ClickProtoService.ClickProtoServiceClient Clicks => ClickClient.Client;
+
 
 	public DatabaseRpcClientContext(IOptions<DatabaseRpcConnectionSettings> options)
 	{
@@ -39,7 +42,10 @@ public class DatabaseRpcClientContext : IDisposable, IAsyncDisposable
 	private void InitializeClients()
 	{
 		var linkClient = new LinkProtoService.LinkProtoServiceClient(_channel);
-		LinkClient = new RpcClientProvider<LinkProtoService.LinkProtoServiceClient>(linkClient);
+		    LinkClient = new RpcClientProvider<LinkProtoService.LinkProtoServiceClient>(linkClient);
+
+		var clickClient = new ClickProtoService.ClickProtoServiceClient(_channel);
+		    ClickClient = new RpcClientProvider<ClickProtoService.ClickProtoServiceClient>(clickClient);
 	}
 
 

@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+option csharp_namespace = "Shared.Protos";
+
+
+
+service ClickProtoService {
+  rpc CreateClick(CreateClickRequest) returns (CreateClickResponse);
+}
+
+
+// Region: Create Click
+
+message CreateClickRequest {
+    int32                     LinkId        = 1;
+    google.protobuf.Timestamp ClickDateTime = 2;
+    string                    IpAddress     = 3;
+    string                    UserAgent     = 4;
+}
+
+message CreateClickResponse {
+    CreateClickResponseDTO CreatedClick = 1;
+}
+
+message CreateClickResponseDTO {
+    int32                     Id            = 1;
+    int32                     LinkId        = 2;
+    google.protobuf.Timestamp ClickDateTime = 3;
+    string                    IpAddress     = 4;
+    string                    UserAgent     = 5;
+}

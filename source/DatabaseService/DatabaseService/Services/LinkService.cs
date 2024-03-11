@@ -1,5 +1,4 @@
 using Microsoft.EntityFrameworkCore;
-using Shared.Database.Data.Entities;
 
 namespace DatabaseService.Services;
 

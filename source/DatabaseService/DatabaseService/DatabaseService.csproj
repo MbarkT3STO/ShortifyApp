@@ -26,6 +26,7 @@
 
   <ItemGroup>
     <protobuf Include="..\..\Shared\Shared.Protos\Protos\Link.proto" GrpcServices="Server" />
+    <protobuf Include="..\..\Shared\Shared.Protos\Protos\Click.proto" GrpcServices="Server" />
   </ItemGroup>
 
 </Project>
