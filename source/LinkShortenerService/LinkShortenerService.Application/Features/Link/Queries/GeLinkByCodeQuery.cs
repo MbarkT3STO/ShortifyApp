@@ -1,3 +1,5 @@
+using LinkShortenerService.Application.Features.Click.Commands;
+
 namespace LinkShortenerService.Application.Features.Link.Queries;
 
 public class GetLinkByCodeQueryResultDTO
@@ -46,13 +48,25 @@ public class GeLinkByCodeQueryMappingProfile: Profile
 /// <summary>
 /// Represents a query to retrieve a link by its code.
 /// </summary>
-public class GetLinkByCodeQuery(string code): IRequest<GetLinkByCodeQueryResult>
+public class GetLinkByCodeQuery: IRequest<GetLinkByCodeQueryResult>
 {
-    public string Code { get; set; } = code;
+	public string Code { get; set; }
+	public bool RegisterClick { get; set; }
+	public string IpAddress { get; set; }
+	public string UserAgent { get; set; }
+
+
+	public GetLinkByCodeQuery(string code, bool registerClick = false, string? ipAddress = null, string? userAgent = null)
+	{
+		Code          = code;
+		RegisterClick = registerClick;
+		IpAddress     = ipAddress;
+		UserAgent     = userAgent;
+	}
 }
 
 
-public class GetLinkByCodeQueryHandler(IMapper mapper, DatabaseRpcClientContext rpcClientContext): BaseQueryHandler<GetLinkByCodeQuery, GetLinkByCodeQueryResult>(mapper, rpcClientContext)
+public class GetLinkByCodeQueryHandler(IMapper mapper, IMediator mediator, DatabaseRpcClientContext rpcClientContext) : BaseQueryHandler<GetLinkByCodeQuery, GetLinkByCodeQueryResult>(mapper, mediator, rpcClientContext)
 {
     public override async Task<GetLinkByCodeQueryResult> Handle(GetLinkByCodeQuery query, CancellationToken cancellationToken)
 	{
@@ -62,6 +76,10 @@ public class GetLinkByCodeQueryHandler(IMapper mapper, DatabaseRpcClientContext 
 			var rpcResponse = await _rpcClientContext.Links.GetLinkByCodeAsync(rpcRequest, cancellationToken: cancellationToken);
 
 			var resultDTO = _mapper.Map<GetLinkByCodeQueryResultDTO>(rpcResponse);
+
+			var CreateClickCommand = new CreateClickCommand(rpcResponse.Link.Id, query.IpAddress, query.UserAgent);
+
+            _ = _mediator.Send(CreateClickCommand, cancellationToken);
 
 			return GetLinkByCodeQueryResult.Succeeded(resultDTO);
 		}

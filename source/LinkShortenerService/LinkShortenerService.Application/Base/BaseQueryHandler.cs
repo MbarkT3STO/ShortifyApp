@@ -11,11 +11,19 @@ namespace LinkShortenerService.Application.Base;
 public abstract class BaseQueryHandler<TQuery, TResponse>: IRequestHandler<TQuery, TResponse> where TQuery: IRequest<TResponse>
 {
 	protected readonly IMapper _mapper;
+	protected readonly IMediator _mediator;
 	protected readonly DatabaseRpcClientContext _rpcClientContext;
 
 	protected BaseQueryHandler(IMapper mapper, DatabaseRpcClientContext rpcClientContext)
 	{
 		_mapper           = mapper;
+		_rpcClientContext = rpcClientContext;
+	}
+
+	protected BaseQueryHandler(IMapper mapper, IMediator mediator, DatabaseRpcClientContext rpcClientContext)
+	{
+		_mapper           = mapper;
+		_mediator         = mediator;
 		_rpcClientContext = rpcClientContext;
 	}
 

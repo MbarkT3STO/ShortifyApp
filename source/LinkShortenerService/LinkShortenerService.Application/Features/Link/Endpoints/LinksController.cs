@@ -1,6 +1,7 @@
 using LinkShortenerService.Application.Features.Link.Commands;
 using LinkShortenerService.Application.Features.Link.Queries;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http.Headers;
 
 namespace LinkShortenerService.API.Controllers;
 
@@ -77,8 +78,11 @@ public class LinksController: ControllerBase
 	[HttpGet(nameof(Redirect)+"/{code}")]
 	public async Task<IActionResult> RedirectToOriginalUrl(string code)
 	{
-		var query  = new GetLinkByCodeQuery(code);
-		var result = await mediator.Send(query);
+		var ipAddress = Request.HttpContext.Connection.RemoteIpAddress.ToString();
+		var userAgent = HttpContext.Request.Headers["User-Agent"].ToString();
+
+		var query     = new GetLinkByCodeQuery(code, registerClick: true, ipAddress, userAgent);
+		var result    = await mediator.Send(query);
 
 		if (result.IsSuccess)
 		{

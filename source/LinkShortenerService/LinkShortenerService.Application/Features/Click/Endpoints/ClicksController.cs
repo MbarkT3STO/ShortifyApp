@@ -1,7 +1,7 @@
 using LinkShortenerService.Application.Features.Click.Commands;
 using Microsoft.AspNetCore.Mvc;
 
-namespace LinkShortenerService.Application.Features.Link.Endpoints;
+namespace LinkShortenerService.Application.Features.Click.Endpoints;
 
 [ApiController]
 [Route("api/[controller]")]

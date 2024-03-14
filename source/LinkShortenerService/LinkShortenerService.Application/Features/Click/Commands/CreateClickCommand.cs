@@ -36,7 +36,6 @@ public class CreateClickCommandMappingProfile: Profile
 			.ForMember(dest => dest.ClickDateTime, opt => opt.MapFrom(src => src.CreatedClick.ClickDateTime.ToDateTime()))
 			.ForMember(dest => dest.IpAddress, opt => opt.MapFrom(src => src.CreatedClick.IpAddress))
 			.ForMember(dest => dest.UserAgent, opt => opt.MapFrom(src => src.CreatedClick.UserAgent));
-
 	}
 }
 
@@ -49,6 +48,13 @@ public class CreateClickCommand: IRequest<CreateClickCommandResult>
 	public int LinkId { get; set; }
 	public string IpAddress { get; set; }
 	public string UserAgent { get; set; }
+
+	public CreateClickCommand(int linkId, string ipAddress, string userAgent)
+	{
+		LinkId    = linkId;
+		IpAddress = ipAddress;
+		UserAgent = userAgent;
+	}
 }
 
 
@@ -63,10 +69,10 @@ public class CreateClickCommandHandler: BaseCommandHandler<CreateClickCommand, C
 		try
 		{
 			var rpcRequest               = _mapper.Map<CreateClickRequest>(command);
-				rpcRequest.ClickDateTime = DateTime.UtcNow.ToTimestamp();
+			    rpcRequest.ClickDateTime = DateTime.UtcNow.ToTimestamp();
 			var rpcResponse              = await _rpcClientContext.Clicks.CreateClickAsync(rpcRequest, cancellationToken: cancellationToken);
 
-			var resultDTO                = _mapper.Map<CreateClickCommandResultDTO>(rpcResponse);
+			var resultDTO = _mapper.Map<CreateClickCommandResultDTO>(rpcResponse);
 
 			return CreateClickCommandResult.Succeeded(resultDTO);
 		}
