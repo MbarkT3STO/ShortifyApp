@@ -1,0 +1,3 @@
+obj\Debug\net8.0/Statistics.cs \
+obj\Debug\net8.0/StatisticsGrpc.cs: C:/Users/MBARK/.nuget/packages/grpc.tools/2.57.0/build/native/include/google/protobuf/timestamp.proto\
+ ../../Shared/Shared.Protos/Protos/Statistics.proto

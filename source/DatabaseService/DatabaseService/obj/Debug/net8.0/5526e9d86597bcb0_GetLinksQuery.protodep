@@ -1,3 +1,0 @@
-obj\Debug\net8.0/GetLinksQuery.cs \
-obj\Debug\net8.0/GetLinksQueryGrpc.cs: C:/Users/MBARK.AzureAD/.nuget/packages/grpc.tools/2.57.0/build/native/include/google/protobuf/timestamp.proto\
- ../../Shared/Shared.Protos/Protos/Link/GetLinksQuery.proto
