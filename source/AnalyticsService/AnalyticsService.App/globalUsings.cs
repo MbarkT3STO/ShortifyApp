@@ -9,4 +9,5 @@ global using MediatR;
 global using AnalyticsService.App.Interfaces;
 global using AnalyticsService.App.Common;
 global using AnalyticsService.App.Exceptions;
+global using AnalyticsService.App.Options;
 
