@@ -1,0 +1,12 @@
+C:\Users\MBARK.AzureAD\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortenerService.Infrastructure\bin\Debug\net8.0\LinkShortenerService.Infrastructure.deps.json
+C:\Users\MBARK.AzureAD\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortenerService.Infrastructure\bin\Debug\net8.0\LinkShortenerService.Infrastructure.dll
+C:\Users\MBARK.AzureAD\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortenerService.Infrastructure\bin\Debug\net8.0\LinkShortenerService.Infrastructure.pdb
+C:\Users\MBARK.AzureAD\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortenerService.Infrastructure\obj\Debug\net8.0\LinkShortenerService.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MBARK.AzureAD\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortenerService.Infrastructure\obj\Debug\net8.0\LinkShortenerService.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\MBARK.AzureAD\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortenerService.Infrastructure\obj\Debug\net8.0\LinkShortenerService.Infrastructure.AssemblyInfo.cs
+C:\Users\MBARK.AzureAD\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortenerService.Infrastructure\obj\Debug\net8.0\LinkShortenerService.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\MBARK.AzureAD\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortenerService.Infrastructure\obj\Debug\net8.0\LinkShortenerService.Infrastructure.sourcelink.json
+C:\Users\MBARK.AzureAD\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortenerService.Infrastructure\obj\Debug\net8.0\LinkShortenerService.Infrastructure.dll
+C:\Users\MBARK.AzureAD\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortenerService.Infrastructure\obj\Debug\net8.0\refint\LinkShortenerService.Infrastructure.dll
+C:\Users\MBARK.AzureAD\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortenerService.Infrastructure\obj\Debug\net8.0\LinkShortenerService.Infrastructure.pdb
+C:\Users\MBARK.AzureAD\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortenerService.Infrastructure\obj\Debug\net8.0\ref\LinkShortenerService.Infrastructure.dll

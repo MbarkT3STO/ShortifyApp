@@ -28,6 +28,9 @@ public class DatabaseRpcClientContext: IDisposable, IAsyncDisposable
 	public RpcClientProvider<ClickProtoService.ClickProtoServiceClient> ClickClient { get; private set; }
 	public ClickProtoService.ClickProtoServiceClient Clicks => ClickClient.Client;
 
+	public RpcClientProvider<StatisticsProtoService.StatisticsProtoServiceClient> StatisticsClient { get; private set; }
+	public StatisticsProtoService.StatisticsProtoServiceClient Statistics => StatisticsClient.Client;
+
 
 	public DatabaseRpcClientContext(IOptions<DatabaseRpcConnectionSettings> options)
 	{
@@ -46,6 +49,9 @@ public class DatabaseRpcClientContext: IDisposable, IAsyncDisposable
 
 		var clickClient = new ClickProtoService.ClickProtoServiceClient(_channel);
 		    ClickClient = new RpcClientProvider<ClickProtoService.ClickProtoServiceClient>(clickClient);
+
+		var statisticsClient = new StatisticsProtoService.StatisticsProtoServiceClient(_channel);
+		    StatisticsClient = new RpcClientProvider<StatisticsProtoService.StatisticsProtoServiceClient>(statisticsClient);
 	}
 
 

@@ -24,5 +24,6 @@ app.MapGet("/", () => "Communication with gRPC endpoints must be made through a 
 
 app.MapGrpcService<LinkService>();
 app.MapGrpcService<ClickService>();
+app.MapGrpcService<StatisticsService>();
 
 app.Run();

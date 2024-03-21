@@ -1,3 +1,5 @@
+using AnalyticsService.App.Base;
+using Shared.Database.RPC.Client;
 using Shared.Protos;
 
 namespace AnalyticsService.App.Queries;
@@ -29,6 +31,9 @@ public class GetClicksCountByLinkCodeQueryMappingProfile: Profile
 			.ForMember(dest => dest.LinkId, opt => opt.MapFrom(src => src.LinkId))
 			.ForMember(dest => dest.LinkCode, opt => opt.MapFrom(src => src.LinkCode))
 			.ForMember(dest => dest.ClicksCount, opt => opt.MapFrom(src => src.ClicksCount));
+
+		CreateMap<GetClicksCountByLinkCodeResponse, GetClicksCountByLinkCodeQueryResult>()
+		.ForMember(dest => dest.Value, opt => opt.MapFrom(src => src));
 	}
 }
 
@@ -44,3 +49,29 @@ public class GetClicksCountByLinkCodeQuery: IRequest<GetClicksCountByLinkCodeQue
 	}
 }
 
+
+
+public class GetClicksCountByLinkCodeQueryHandler : BaseQueryHandler<GetClicksCountByLinkCodeQuery, GetClicksCountByLinkCodeQueryResult>
+{
+	public GetClicksCountByLinkCodeQueryHandler(IMapper mapper, DatabaseRpcClientContext rpcClientContext) : base(mapper, rpcClientContext)
+	{
+	}
+
+
+	public override async Task<GetClicksCountByLinkCodeQueryResult> Handle(GetClicksCountByLinkCodeQuery request, CancellationToken cancellationToken)
+	{
+		try
+		{
+			var rpcRequest = _mapper.Map<GetClicksCountByLinkCodeRequest>(request);
+			var rpcResponse = await _rpcClientContext.Statistics.GetClicksCountByLinkCodeAsync(rpcRequest, cancellationToken: cancellationToken);
+
+			var resultDTO = _mapper.Map<GetClicksCountByLinkCodeQueryResultDTO>(rpcResponse);
+
+			return GetClicksCountByLinkCodeQueryResult.Succeeded(resultDTO);
+		}
+		catch (Exception e)
+		{
+			return GetClicksCountByLinkCodeQueryResult.Failed(e);
+		}
+	}
+}

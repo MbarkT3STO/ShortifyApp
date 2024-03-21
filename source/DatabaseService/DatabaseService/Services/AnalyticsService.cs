@@ -1,6 +1,6 @@
 namespace DatabaseService.Services;
 
-public class AnalyticsService(AppDbContext dbContext, IMapper mapper): StatisticsProtoService.StatisticsProtoServiceBase
+public class StatisticsService(AppDbContext dbContext, IMapper mapper): StatisticsProtoService.StatisticsProtoServiceBase
 {
 	readonly AppDbContext _dbContext = dbContext;
 	readonly IMapper _mapper         = mapper;
