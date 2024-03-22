@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Shared.Database.RPC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+409a48f136d021db492519ad28c21f300d0f8d57")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d2ecbdbe0d881135cb0975926c3cf07959e93ba0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Shared.Database.RPC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Shared.Database.RPC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

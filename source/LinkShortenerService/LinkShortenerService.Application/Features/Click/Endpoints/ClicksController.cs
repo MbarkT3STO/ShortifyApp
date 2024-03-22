@@ -5,7 +5,7 @@ namespace LinkShortenerService.Application.Features.Click.Endpoints;
 
 [ApiController]
 [Route("api/[controller]")]
-public class ClicksController : ControllerBase
+public class ClicksController: ControllerBase
 {
 	readonly IMediator mediator;
 
@@ -18,7 +18,9 @@ public class ClicksController : ControllerBase
 	[HttpPost(nameof(Create))]
 	public async Task<IActionResult> Create([FromBody] CreateClickCommand command)
 	{
-		var result = await mediator.Send(command);
+		var agent             = Request.Headers["User-Agent"].ToString();
+		    command.UserAgent = agent;
+		var result            = await mediator.Send(command);
 
 		if (result.IsSuccess)
 		{
