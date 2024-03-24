@@ -1,0 +1,53 @@
+# compiled output
+/dist
+/dist-server
+/tmp
+/out-tsc
+
+# dependencies
+/node_modules
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+
+# System Files
+.DS_Store
+Thumbs.db
+
+
+
+
+# Ignore Visual Studio files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Ignore NuGet packages
+*.nupkg
+**/packages/*
+**/bin
+**/obj
+
+# Ignore build output
+**/bin
+**/obj
+**/AppPackages
+**/BundleArtifacts
+**/DWARF
+**/Models
+
+# Ignore Angular build output
+**/node_modules
+**/node_modules/*
+**/node_modules/**
+**/node_modules\**
+**/node_modules\*
+**/node_modules\**
