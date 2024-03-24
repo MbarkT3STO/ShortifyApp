@@ -13,6 +13,18 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Configure CORS
+builder.Services.AddCors( options =>
+{
+	options.AddPolicy("AllowSpecificOrigin",
+		builder =>
+		{
+			builder.WithOrigins("https://localhost:44482")
+				.AllowAnyHeader()
+				.AllowAnyMethod();
+		});
+});
+
 var app = builder.Build();
 
 app.MapControllers();
@@ -47,7 +59,7 @@ app.MapGet("/weatherforecast", () =>
 .WithOpenApi();
 
 
-
+app.UseCors("AllowSpecificOrigin");
 app.UseRouting();
 app.UseCors(cfg => cfg.AllowAnyOrigin());
 

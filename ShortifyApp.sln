@@ -21,6 +21,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared.Database.RPC", "sour
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnalyticsService.API", "source\AnalyticsService\AnalyticsService.API\AnalyticsService.API.csproj", "{69B5A14E-1B1B-4BBA-9025-E7229428A2B5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrontEndService.WEB", "source\FrontEndService\FrontEndService.WEB\FrontEndService.WEB.csproj", "{DA37AF6C-146A-4D06-8158-2F271E97FFA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "source", "source", "{F84B8FC0-2E92-4934-8F83-C5489E24356B}"
+EndProject
+
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +68,14 @@ Global
 		{69B5A14E-1B1B-4BBA-9025-E7229428A2B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69B5A14E-1B1B-4BBA-9025-E7229428A2B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69B5A14E-1B1B-4BBA-9025-E7229428A2B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61F5E5E0-3579-4C41-B09B-49B25FCFECEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61F5E5E0-3579-4C41-B09B-49B25FCFECEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61F5E5E0-3579-4C41-B09B-49B25FCFECEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61F5E5E0-3579-4C41-B09B-49B25FCFECEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA37AF6C-146A-4D06-8158-2F271E97FFA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA37AF6C-146A-4D06-8158-2F271E97FFA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA37AF6C-146A-4D06-8158-2F271E97FFA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA37AF6C-146A-4D06-8158-2F271E97FFA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

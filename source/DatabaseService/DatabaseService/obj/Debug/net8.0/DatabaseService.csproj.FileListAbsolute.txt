@@ -217,10 +217,10 @@ c:\Users\MBARK\source\repos\ShortifyApp\source\DatabaseService\DatabaseService\o
 c:\Users\MBARK\source\repos\ShortifyApp\source\DatabaseService\DatabaseService\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.DatabaseService.props
 c:\Users\MBARK\source\repos\ShortifyApp\source\DatabaseService\DatabaseService\obj\Debug\net8.0\staticwebassets.pack.json
 c:\Users\MBARK\source\repos\ShortifyApp\source\DatabaseService\DatabaseService\obj\Debug\net8.0\scopedcss\bundle\DatabaseService.styles.css
-C:\Users\MBARK\source\repos\ShortifyApp\source\DatabaseService\DatabaseService\obj\Debug\net8.0\DatabaseService.csproj.CopyComplete
 c:\Users\MBARK\source\repos\ShortifyApp\source\DatabaseService\DatabaseService\obj\Debug\net8.0\DatabaseService.dll
 c:\Users\MBARK\source\repos\ShortifyApp\source\DatabaseService\DatabaseService\obj\Debug\net8.0\refint\DatabaseService.dll
 c:\Users\MBARK\source\repos\ShortifyApp\source\DatabaseService\DatabaseService\obj\Debug\net8.0\DatabaseService.pdb
 C:\Users\MBARK\source\repos\ShortifyApp\source\DatabaseService\DatabaseService\obj\Debug\net8.0\DatabaseService.genruntimeconfig.cache
 C:\Users\MBARK\source\repos\ShortifyApp\source\DatabaseService\DatabaseService\obj\Debug\net8.0\ref\DatabaseService.dll
 C:\Users\MBARK.AzureAD\source\repos\ShortifyApp\source\DatabaseService\DatabaseService\obj\Debug\net8.0\Database.0EBD2A6D.Up2Date
+C:\Users\MBARK\source\repos\ShortifyApp\source\DatabaseService\DatabaseService\obj\Debug\net8.0\Database.0EBD2A6D.Up2Date

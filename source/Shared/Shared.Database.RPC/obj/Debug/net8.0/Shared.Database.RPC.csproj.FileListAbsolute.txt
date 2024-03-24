@@ -24,9 +24,9 @@ c:\Users\MBARK\source\repos\ShortifyApp\source\Shared\Shared.Database.RPC\obj\De
 c:\Users\MBARK\source\repos\ShortifyApp\source\Shared\Shared.Database.RPC\obj\Debug\net8.0\Shared.Database.RPC.AssemblyInfo.cs
 c:\Users\MBARK\source\repos\ShortifyApp\source\Shared\Shared.Database.RPC\obj\Debug\net8.0\Shared.Database.RPC.csproj.CoreCompileInputs.cache
 c:\Users\MBARK\source\repos\ShortifyApp\source\Shared\Shared.Database.RPC\obj\Debug\net8.0\Shared.Database.RPC.sourcelink.json
-c:\Users\MBARK\source\repos\ShortifyApp\source\Shared\Shared.Database.RPC\obj\Debug\net8.0\Shared.Database.RPC.csproj.CopyComplete
 c:\Users\MBARK\source\repos\ShortifyApp\source\Shared\Shared.Database.RPC\obj\Debug\net8.0\Shared.Database.RPC.dll
 c:\Users\MBARK\source\repos\ShortifyApp\source\Shared\Shared.Database.RPC\obj\Debug\net8.0\refint\Shared.Database.RPC.dll
 c:\Users\MBARK\source\repos\ShortifyApp\source\Shared\Shared.Database.RPC\obj\Debug\net8.0\Shared.Database.RPC.pdb
 c:\Users\MBARK\source\repos\ShortifyApp\source\Shared\Shared.Database.RPC\obj\Debug\net8.0\ref\Shared.Database.RPC.dll
 C:\Users\MBARK.AzureAD\source\repos\ShortifyApp\source\Shared\Shared.Database.RPC\obj\Debug\net8.0\Shared.D.33A3B4F7.Up2Date
+C:\Users\MBARK\source\repos\ShortifyApp\source\Shared\Shared.Database.RPC\obj\Debug\net8.0\Shared.D.33A3B4F7.Up2Date

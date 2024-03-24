@@ -28,9 +28,9 @@ c:\Users\MBARK\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortene
 c:\Users\MBARK\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortenerService.Application\obj\Debug\net8.0\LinkShortenerService.Application.AssemblyInfo.cs
 c:\Users\MBARK\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortenerService.Application\obj\Debug\net8.0\LinkShortenerService.Application.csproj.CoreCompileInputs.cache
 c:\Users\MBARK\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortenerService.Application\obj\Debug\net8.0\LinkShortenerService.Application.sourcelink.json
-c:\Users\MBARK\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortenerService.Application\obj\Debug\net8.0\LinkShortenerService.Application.csproj.CopyComplete
 c:\Users\MBARK\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortenerService.Application\obj\Debug\net8.0\LinkShortenerService.Application.dll
 c:\Users\MBARK\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortenerService.Application\obj\Debug\net8.0\refint\LinkShortenerService.Application.dll
 c:\Users\MBARK\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortenerService.Application\obj\Debug\net8.0\LinkShortenerService.Application.pdb
 c:\Users\MBARK\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortenerService.Application\obj\Debug\net8.0\ref\LinkShortenerService.Application.dll
 C:\Users\MBARK.AzureAD\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortenerService.Application\obj\Debug\net8.0\LinkShor.862D058C.Up2Date
+C:\Users\MBARK\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortenerService.Application\obj\Debug\net8.0\LinkShor.862D058C.Up2Date

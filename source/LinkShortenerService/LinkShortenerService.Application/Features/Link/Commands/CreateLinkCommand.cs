@@ -67,10 +67,11 @@ public class CreateLinkCommandHandler: BaseCommandHandler<CreateLinkCommand, Cre
 		{
 			var rpcRequest = _mapper.Map<CreateLinkRequest>(command);
 
-			var shortenedUrl                   = _urlService.ShortenUrl(command.OriginalUrl);
-			    rpcRequest.ShortUrl            = shortenedUrl.ShortUrl;
-			    rpcRequest.CreationDateAndTime = DateTime.UtcNow.ToTimestamp();
-			    rpcRequest.IsActive            = true;
+			var shortenedUrl                     = _urlService.ShortenUrl(command.OriginalUrl);
+			    rpcRequest.ShortUrl              = shortenedUrl.ShortUrl;
+			    rpcRequest.CreationDateAndTime   = DateTime.UtcNow.ToTimestamp();
+			    rpcRequest.ExpirationDateAndTime = DateTime.SpecifyKind(command.ExpirationDateAndTime ?? DateTime.MaxValue, DateTimeKind.Utc).ToTimestamp();
+			    rpcRequest.IsActive              = true;
 
 			var rpcResponse = await _rpcClientContext.Links.CreateLinkAsync(rpcRequest, cancellationToken: cancellationToken);
 

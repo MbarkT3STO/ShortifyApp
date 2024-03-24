@@ -103,7 +103,6 @@ C:\Users\MBARK\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortene
 C:\Users\MBARK\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortenerService.API\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.LinkShortenerService.API.props
 C:\Users\MBARK\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortenerService.API\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Users\MBARK\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortenerService.API\obj\Debug\net8.0\scopedcss\bundle\LinkShortenerService.API.styles.css
-C:\Users\MBARK\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortenerService.API\obj\Debug\net8.0\LinkShortenerService.API.csproj.CopyComplete
 C:\Users\MBARK\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortenerService.API\obj\Debug\net8.0\LinkShortenerService.API.dll
 C:\Users\MBARK\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortenerService.API\obj\Debug\net8.0\refint\LinkShortenerService.API.dll
 C:\Users\MBARK\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortenerService.API\obj\Debug\net8.0\LinkShortenerService.API.pdb
@@ -116,3 +115,4 @@ C:\Users\MBARK\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortene
 C:\Users\MBARK\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortenerService.API\bin\Debug\net8.0\Shared.Database.RPC.dll
 C:\Users\MBARK\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortenerService.API\bin\Debug\net8.0\Shared.Database.RPC.pdb
 C:\Users\MBARK.AzureAD\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortenerService.API\obj\Debug\net8.0\LinkShor.897720C1.Up2Date
+C:\Users\MBARK\source\repos\ShortifyApp\source\LinkShortenerService\LinkShortenerService.API\obj\Debug\net8.0\LinkShor.897720C1.Up2Date
