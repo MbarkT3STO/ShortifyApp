@@ -18,13 +18,32 @@ export class ShortenComponent implements OnInit {
   ngOnInit() {
   }
 
+
+
+  public clearUrlBox() {
+    this.shortenUrlCommand.originalUrl = "";
+  }
+
+
   public shorten(url: string) {
-
-    alert(url);
-
     this.linkService.shorten(url).subscribe(result => {
       this.shortenUrlCommandResult = result;
     });
   }
+
+
+  public copyTheShortUrlToClipboard() {
+
+    const element = document.getElementById("new-url-label") as HTMLDivElement;
+
+    if (element) {
+      const innerText = element.innerText;
+
+      // Remove the "Your short URL: " part
+      const textToCopy = innerText.substring(15);
+      navigator.clipboard.writeText(textToCopy);
+    }
+  }
+
 
 }

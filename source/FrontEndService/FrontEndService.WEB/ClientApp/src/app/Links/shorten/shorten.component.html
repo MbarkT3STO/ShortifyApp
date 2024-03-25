@@ -1,7 +1,7 @@
 <body>
   <main>
     <div id="header-div" class="">
-      <h1 class="">Link Shortener</h1>
+      <h1 class="">Shortify</h1>
     </div>
     <!-- link input and shorten button -->
     <div id="content-div">
@@ -17,7 +17,7 @@
         <button id="shorten" type="button" class="content-row button" (click)="shorten(shortenUrlCommand.originalUrl)">
           Shorten URL
         </button>
-        <button type="button" id="clear-btn" class="content-row button">
+        <button type="button" id="clear-btn" class="content-row button" (click)="clearUrlBox()">
           Clear
         </button>
       </div>
@@ -30,6 +30,7 @@
           id="copy-btn"
           data-clipboard-target="#new-url"
           class="content-row button"
+          (click)="copyTheShortUrlToClipboard()"
         >
           Copy
         </button>

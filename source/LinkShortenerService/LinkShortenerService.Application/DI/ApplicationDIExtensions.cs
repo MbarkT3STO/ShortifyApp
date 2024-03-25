@@ -21,7 +21,7 @@ public static class ApplicationDIExtensions
 			options.Port = 5256;
 		});
 
-		services.AddSingleton<HostDetails>(new HostDetails("http://localhost", 5211));
+		services.AddSingleton<HostDetails>(new HostDetails("http://localhost", 44482));
 		services.AddSingleton<UrlService>();
 		services.AddSingleton<DatabaseRpcClientContext>();
 
