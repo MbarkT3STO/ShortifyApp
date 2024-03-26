@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0iXscjqq5l/U72qc8OXUIpT+K1JehzEWDpm3vNtI8CXu551bfXQwt7oJA7QQvTwMQMa/VrMtpsKqdfyN6gZdXA==",
+  "dgSpecHash": "rL5Y7OGDGXh8DMfOhr7L3TZ16zpUdM4OLF9gRSHrx+wF25qekUWlefm/Y1aug8JtdsAXm4WxN4VQijq4Y2QSKA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\MBARK\\source\\repos\\ShortifyApp\\source\\LinkShortenerService\\LinkShortenerService.Infrastructure\\LinkShortenerService.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\MBARK.AzureAD\\source\\repos\\ShortifyApp\\source\\LinkShortenerService\\LinkShortenerService.Infrastructure\\LinkShortenerService.Infrastructure.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

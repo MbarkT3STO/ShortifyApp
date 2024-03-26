@@ -8,9 +8,9 @@ namespace FrontEndService.WEB.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class LinksController : ControllerBase
+public class LinksController: ControllerBase
 {
-		[HttpGet(nameof(Redirect)+"/{code}")]
+	[HttpGet(nameof(Redirect) + "/{code}")]
 	public async Task<IActionResult> RedirectToOriginalUrl(string code)
 	{
 		var ipAddress = Request.HttpContext.Connection.RemoteIpAddress.ToString();
