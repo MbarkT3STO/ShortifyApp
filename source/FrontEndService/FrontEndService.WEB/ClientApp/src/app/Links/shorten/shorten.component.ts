@@ -1,40 +1,37 @@
-import { Component, OnInit }          from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ShortenLinkCommand }         from 'src/app/Commands/ShortenLinkCommand';
 import { ShortenLinkCommandResult }   from './../../Commands/ShortenLinkCommand';
 import { LinkService as LinkService } from 'src/app/Services/Link.service';
 
 @Component({
-  selector   : 'app-shorten',
+  selector: 'app-shorten',
   templateUrl: './shorten.component.html',
-  styleUrls  : ['./shorten.component.css']
+  styleUrls: ['./shorten.component.css'],
 })
 export class ShortenComponent implements OnInit {
+  public shortenUrlCommand: ShortenLinkCommand = new ShortenLinkCommand('');
+  public shortenUrlCommandResult: ShortenLinkCommandResult =
+    new ShortenLinkCommandResult(0, '', '', new Date(), new Date(), true);
 
-  public shortenUrlCommand: ShortenLinkCommand             = new ShortenLinkCommand("");
-  public shortenUrlCommandResult: ShortenLinkCommandResult = new ShortenLinkCommandResult(0, "", "", new Date(), new Date(), true);
+  constructor(private linkService: LinkService) {}
 
-  constructor(private linkService: LinkService) { }
-
-  ngOnInit() {
-  }
-
-
+  ngOnInit() {}
 
   public clearUrlBox() {
-    this.shortenUrlCommand.originalUrl = "";
+    this.shortenUrlCommand.originalUrl = '';
   }
 
 
   public shorten(url: string) {
-    this.linkService.shorten(url).subscribe(result => {
-      this.shortenUrlCommandResult = result;
-    });
+    this.linkService
+      .shorten(url)
+      .subscribe((result: ShortenLinkCommandResult) => {
+        this.shortenUrlCommandResult = result;
+      });
   }
 
-
   public copyTheShortUrlToClipboard() {
-
-    const element = document.getElementById("new-url-label") as HTMLDivElement;
+    const element = document.getElementById('new-url-label') as HTMLDivElement;
 
     if (element) {
       const innerText = element.innerText;
@@ -44,6 +41,4 @@ export class ShortenComponent implements OnInit {
       navigator.clipboard.writeText(textToCopy);
     }
   }
-
-
 }

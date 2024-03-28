@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DatabaseService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3c068ecf9299f5134775d2b3aa90c854649e7757")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e77a2b5753038f777c5cb403a6a0d5647b57c6f4")]
 [assembly: System.Reflection.AssemblyProductAttribute("DatabaseService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DatabaseService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -43,6 +43,19 @@ public class LinksController: ControllerBase
 		return BadRequest(result.Error?.Message);
 	}
 
+	[HttpGet("Get/{code}")]
+	public async Task<IActionResult> GetByCode(string code)
+	{
+		var result = await mediator.Send(new GetLinkByCodeQuery(code));
+
+		if (result.IsSuccess)
+		{
+			return Ok(result.Value);
+		}
+
+		return BadRequest(result.Error?.Message);
+	}
+
 
 
 	[HttpPost(nameof(Create))]

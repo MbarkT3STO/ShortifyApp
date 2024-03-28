@@ -51,6 +51,10 @@ public class GeLinkByCodeQueryMappingProfile: Profile
 public class GetLinkByCodeQuery: IRequest<GetLinkByCodeQueryResult>
 {
 	public string Code { get; set; }
+
+	/// <summary>
+	/// Determines whether to register a click.
+	/// </summary>
 	public bool RegisterClick { get; set; }
 	public string IpAddress { get; set; }
 	public string UserAgent { get; set; }
@@ -66,9 +70,9 @@ public class GetLinkByCodeQuery: IRequest<GetLinkByCodeQueryResult>
 }
 
 
-public class GetLinkByCodeQueryHandler(IMapper mapper, IMediator mediator, DatabaseRpcClientContext rpcClientContext) : BaseQueryHandler<GetLinkByCodeQuery, GetLinkByCodeQueryResult>(mapper, mediator, rpcClientContext)
+public class GetLinkByCodeQueryHandler(IMapper mapper, IMediator mediator, DatabaseRpcClientContext rpcClientContext): BaseQueryHandler<GetLinkByCodeQuery, GetLinkByCodeQueryResult>(mapper, mediator, rpcClientContext)
 {
-    public override async Task<GetLinkByCodeQueryResult> Handle(GetLinkByCodeQuery query, CancellationToken cancellationToken)
+	public override async Task<GetLinkByCodeQueryResult> Handle(GetLinkByCodeQuery query, CancellationToken cancellationToken)
 	{
 		try
 		{
@@ -77,9 +81,11 @@ public class GetLinkByCodeQueryHandler(IMapper mapper, IMediator mediator, Datab
 
 			var resultDTO = _mapper.Map<GetLinkByCodeQueryResultDTO>(rpcResponse);
 
-			var CreateClickCommand = new CreateClickCommand(rpcResponse.Link.Id, query.IpAddress, query.UserAgent);
-
-            _ = _mediator.Send(CreateClickCommand, cancellationToken);
+			if (query.RegisterClick)
+			{
+				var CreateClickCommand = new CreateClickCommand(rpcResponse.Link.Id, query.IpAddress, query.UserAgent);
+					_                  = _mediator.Send(CreateClickCommand, cancellationToken);
+			}
 
 			return GetLinkByCodeQueryResult.Succeeded(resultDTO);
 		}
