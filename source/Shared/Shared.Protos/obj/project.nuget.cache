@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yHXz18e9EgGPWWX8OXpXIg3pvfHXi2RsXehj1wPoEj8lTvhTuJ332miFSHDLWrrWIJ4kMt1O/PLTDJ2OdP+a3g==",
+  "dgSpecHash": "OCDnPaCAeefoHNLM063h+X0n1SXCgjfFJ96BT2VFrih2fniIUQI6mSoakukRK9eKH6q887RjexsIADIrnBDA8g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\MBARK.AzureAD\\source\\repos\\ShortifyApp\\source\\Shared\\Shared.Protos\\Shared.Protos.csproj",
+  "projectFilePath": "C:\\Users\\MBARK\\source\\repos\\ShortifyApp\\source\\Shared\\Shared.Protos\\Shared.Protos.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
