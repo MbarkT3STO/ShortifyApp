@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
 // Services
@@ -14,6 +14,10 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { ShortenComponent } from './Links/shorten/shorten.component';
+
+
+// Http Interceptors
+import { ShortenUrlInterceptorService } from './HTTP-Interceptors/ShortenUrlInterceptor.service';
 
 @NgModule({
   declarations: [
@@ -29,14 +33,20 @@ import { ShortenComponent } from './Links/shorten/shorten.component';
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full' },
+      // { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
-      { path: 'shorten', component: ShortenComponent }
+      { path: 'shorten', component: ShortenComponent },
+      { path: '**', redirectTo: 'shorten' }
     ])
   ],
   providers: [
-    LinkService
+    LinkService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ShortenUrlInterceptorService,
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })

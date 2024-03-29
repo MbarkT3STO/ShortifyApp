@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MBARK\\source\\repos\\ShortifyApp\\source\\Shared\\Shared.Protos\\Shared.Protos.csproj": {}
+    "C:\\Users\\MBARK.AzureAD\\source\\repos\\ShortifyApp\\source\\Shared\\Shared.Protos\\Shared.Protos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MBARK\\source\\repos\\ShortifyApp\\source\\Shared\\Shared.Protos\\Shared.Protos.csproj": {
+    "C:\\Users\\MBARK.AzureAD\\source\\repos\\ShortifyApp\\source\\Shared\\Shared.Protos\\Shared.Protos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MBARK\\source\\repos\\ShortifyApp\\source\\Shared\\Shared.Protos\\Shared.Protos.csproj",
+        "projectUniqueName": "C:\\Users\\MBARK.AzureAD\\source\\repos\\ShortifyApp\\source\\Shared\\Shared.Protos\\Shared.Protos.csproj",
         "projectName": "Shared.Protos",
-        "projectPath": "C:\\Users\\MBARK\\source\\repos\\ShortifyApp\\source\\Shared\\Shared.Protos\\Shared.Protos.csproj",
-        "packagesPath": "C:\\Users\\MBARK\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MBARK\\source\\repos\\ShortifyApp\\source\\Shared\\Shared.Protos\\obj\\",
+        "projectPath": "C:\\Users\\MBARK.AzureAD\\source\\repos\\ShortifyApp\\source\\Shared\\Shared.Protos\\Shared.Protos.csproj",
+        "packagesPath": "C:\\Users\\MBARK.AzureAD\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MBARK.AzureAD\\source\\repos\\ShortifyApp\\source\\Shared\\Shared.Protos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\MBARK\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MBARK.AzureAD\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

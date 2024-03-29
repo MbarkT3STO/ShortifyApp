@@ -11,26 +11,24 @@ export class AppComponent {
   title = 'app';
 
   constructor(
-    private route      : ActivatedRoute,
-    private router     : Router,
-    private linkService: LinkService
+
   ) {
-    this.route.url.subscribe(urlSegment => {
-      if (urlSegment.length > 0) {
-        const shortCode = urlSegment[0].path;
-        this.redirectToOriginalUrl(shortCode);
-      }
-      else {
-        alert('No short code provided');
-      }
-    });
+    // this.route.url.subscribe(urlSegment => {
+    //   if (urlSegment.length > 0) {
+    //     const shortCode = urlSegment[0].path;
+    //     this.redirectToOriginalUrl(shortCode);
+    //   }
+    //   else {
+    //     alert('No short code provided');
+    //   }
+    // });
   }
 
-  redirectToOriginalUrl(shortCode: string) {
-    this.linkService
-      .GetByCode(shortCode)
-      .subscribe((result: GetLinkByCodeQueryResult) => {
-        window.location.href = result.originalUrl;
-      });
-  }
+  // redirectToOriginalUrl(shortCode: string) {
+  //   this.linkService
+  //     .GetByCode(shortCode)
+  //     .subscribe((result: GetLinkByCodeQueryResult) => {
+  //       window.location.href = result.originalUrl;
+  //     });
+  // }
 }
