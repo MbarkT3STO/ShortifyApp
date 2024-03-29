@@ -14,6 +14,7 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { ShortenComponent } from './Links/shorten/shorten.component';
+import { RedirectComponent } from './Links/redirect/redirect.component';
 
 
 // Http Interceptors
@@ -26,7 +27,8 @@ import { ShortenUrlInterceptorService } from './HTTP-Interceptors/ShortenUrlInte
     HomeComponent,
     CounterComponent,
     FetchDataComponent,
-    ShortenComponent
+    ShortenComponent,
+    RedirectComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -37,16 +39,12 @@ import { ShortenUrlInterceptorService } from './HTTP-Interceptors/ShortenUrlInte
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'shorten', component: ShortenComponent },
-      { path: '**', redirectTo: 'shorten' }
+      { path: 'redirect', component: RedirectComponent },
+      { path: ':shortCode', component: RedirectComponent}
     ])
   ],
   providers: [
-    LinkService,
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: ShortenUrlInterceptorService,
-      multi: true
-    }
+    LinkService
   ],
   bootstrap: [AppComponent]
 })

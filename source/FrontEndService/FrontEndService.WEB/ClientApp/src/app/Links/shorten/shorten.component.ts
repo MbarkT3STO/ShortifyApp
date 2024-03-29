@@ -13,7 +13,9 @@ export class ShortenComponent implements OnInit {
   public shortenUrlCommandResult: ShortenLinkCommandResult =
     new ShortenLinkCommandResult(0, '', '', new Date(), new Date(), true);
 
-  constructor(private linkService: LinkService) {}
+  constructor(private linkService: LinkService) {
+
+  }
 
   ngOnInit() {}
 
