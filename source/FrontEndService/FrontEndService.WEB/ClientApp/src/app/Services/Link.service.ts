@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ShortenLinkCommand, ShortenLinkCommandResult } from '../Commands/ShortenLinkCommand';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { GetLinkByCodeQueryResult } from '../Queries/GetLinkByCodeQuery';
 
 @Injectable({
@@ -31,4 +31,10 @@ export class LinkService {
   GetByCode(code: string): Observable<GetLinkByCodeQueryResult> {
     return this.http.get<GetLinkByCodeQueryResult>(this.appUrl + "/Get/" + code);
   }
+
+
+  GetOriginalUrlByCode(code: string): Observable<string> {
+    return this.GetByCode(code).pipe(map((result: GetLinkByCodeQueryResult) => result.originalUrl));
+  }
+
 }
